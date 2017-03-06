@@ -1,0 +1,46 @@
+input, textarea{margin: 0 !important}
+h1{font-size: .2rem; color: #39A870; line-height: .8rem;}
+p span{display: inline-block; width: 48%}
+p label{display: block; padding: 5px 0}
+b{display: block; width: 100%; line-height: 50px}
+b input[type=radio]{margin-left: 40px}
+button.u-sub{}
+caption{border-bottom: 1px solid #ccc; padding: 10px 0}
+tr{border-bottom: 1px solid #ccc; text-align: center; color: #999}
+tr:hover{background: rgba(0,0,0,.1)}
+/* 统一清除浮动 */
+.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+.g-bdc,.m-dimg ul,.u-tab{zoom:1;}
+/* 布局 */
+.g-doc{background: url(../img/js-bg.jpg) center no-repeat; background-size: cover; background-attachment: fixed;}
+.g-bd{overflow: hidden}
+.g-sd{width: 3.2rem; background: rgba(0, 0, 0, 0.08); font-weight: bold; font-size: 16px}
+.g-sd h1{font-size: .2rem}
+.g-sd li,
+.g-sd .exit{height: .4rem; line-height: .4rem; text-indent: 1em; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; cursor: pointer}
+.g-sd li span,
+.g-sd .exit span{float: right; text-indent: -2em; font-family: serif}
+.g-sd li.z-crt{background: #39A870; color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd li:hover,
+.g-sd .exit:hover{background: rgba(57, 168, 112, 0.48); color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd li>a{display: block; width: 100%; height: 100%}
+.g-sd .hd{padding-bottom: 50px; border-bottom: 2px dashed #ccc}
+.g-mn{float: right; width: 3rem; padding: 0 .1rem}
+.g-mn .incard:first{margin: 0}
+.g-mn .incard{margin: .5rem 0}
+/* 模块 */
+.m-hdpic{position: static; width: 100px; height: 100px; float: left; background: url(../img/js1.jpg) center; background-size: cover; border-radius: 50%}
+.m-photos{padding: 20px 0; margin-left: -20px}
+.m-photos>li{float: left;width: 1.3rem;height: 1.3rem;line-height: 120px;border: 2px solid #ccc;text-align: center;font-size: 100px;color: #ccc;cursor: pointer;margin-left: .1rem;margin-bottom: .1rem;overflow: hidden;}
+.m-orderAdmin{padding: 20px 0; width: 100%; color: #999}
+.m-orderAdmin b,
+.m-income span.ispayed{color: #F00}
+.m-orderAdmin b.ispayed{color: orange}
+.m-balance tr{border: none; font-weight: bold;}
+/* 元件 */
+.u-sub{width: 100%;height: .4rem;margin-top: 20px;background: #F00;border: none;color: #FFF;font-size: 20px;border-radius: .1rem;-webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+.u-sub:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
+/* 功能 */
+.f-tac{text-align:center}
+/* 皮肤 */
+.s-fc,a.s-fc:hover{color:#fff;}

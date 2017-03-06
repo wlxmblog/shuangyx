@@ -19,10 +19,15 @@ del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:14px/1.14 '微软雅黑',\5b8b\4f53;color:#333;outline:0;}
 body{background:#fff;}
 a,a:hover{color:#333;}
+textarea,
+input[type=email],
+input[type=tel],
+input[type=number],
 input[type=text],
 input[type=password]{width: 97%;height: .4rem;margin: .2rem 0;border: none;border-radius: .1rem;background: #eee;text-indent: 2em;}
 input[type=text]:focus,
 input[type=password]:focus{box-shadow: #0f0 0 0 .05rem}
+textarea{ line-height: 1.5em; padding: .5em }
 .a-loop-tb{animation: loopTb ease-in-out 2s infinite; -webkit-animation: loopTb ease-in-out 2s infinite;}
 -webkit-@keyframes loopTb {
   0%{transform: translateY(10px); opacity: 1}
@@ -85,7 +90,6 @@ input[type=password]:focus{box-shadow: #0f0 0 0 .05rem}
 /*底部*/
 .g-ft{border-top: .05rem solid #39a870; background: #333;color: #ccc; font-size: 12px}
 .g-ft .bd{ overflow: hidden; line-height: .24rem}
-.g-ft .bd ul{}
 .g-ft .bd li{float: left; color: #FFF}
 .g-ft .bd p{text-align: center;}
 .g-ft .bd .f-fr{text-align: center}

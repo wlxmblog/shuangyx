@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>爽一下</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="css/ucenter.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/touchicon.png">
+</head>
+
+<body>
+  <div class="g-doc swiper-container swiper-container-out" style="height: 640px;">
+    <div class="g-hd f-tss menu-button">
+      <div class="u-menu f-tss">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+      </div>
+      <ul class="m-nav animated flipOutY f-tss">
+        <li id="login"><a href="#">登录/注册</a></li>
+        <li><a href="index.html" class="z-crt">首页</a></li>
+        <li><a href="#serv">项目服务</a></li>
+        <li><a href="#order">技师直约</a></li>
+      </ul>
+    </div>
+    <!-- 弹窗 -->
+    <div class="m-popmask"></div>
+    <div class="pop-out animated">
+      <button class="pop-close">+</button>
+      <div class="m-pop">
+        <ul class="pop-menu">
+          <li class="z-crt">技师登录</li>
+          <li>技师注册</li>
+          <li>客户登录</li>
+          <li>客户注册</li>
+        </ul>
+        <ul class="change-list">
+          <!-- 技师登录 -->
+          <li class="z-crt">
+            <form action="/">
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="" placeholder="手机号/邮箱" autocomplete="off">
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required="" placeholder="密码6-16位">
+              <input type="submit" class="u-btn" value="登  录">
+            </form>
+          </li>
+          <!-- 技师注册 -->
+          <li>
+            <form action="/">
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="" placeholder="手机号/邮箱" autocomplete="off">
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required="" placeholder="密码6-16位">
+              <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" placeholder="确认密码">
+              <input type="submit" class="u-btn" value="注  册">
+            </form>
+          </li>
+          <!-- 客户登录 -->
+          <li>
+            <form action="/">
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="" placeholder="手机号/邮箱" autocomplete="off">
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required="" placeholder="密码6-16位">
+              <input type="submit" class="u-btn" value="登  录">
+            </form>
+          </li>
+          <!-- 客户注册 -->
+          <li>
+            <form action="/">
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="" placeholder="手机号/邮箱" autocomplete="off">
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required="" placeholder="密码6-16位">
+              <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" placeholder="确认密码">
+              <input type="submit" class="u-btn" value="注  册">
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 弹窗 -->
+    <!--主体-->
+    <div class="g-bd">
+      
+      <div class="g-mn m-ucenter">
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="m-repass incard">
+          <h1>修改密码</h1>
+          <form action="/" enctype="multipart/form-data">
+            <p>
+              <span class="f-fl">
+                <label for="name">当前密码：</label>
+                <input type="password" name="old" id="old" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <p>
+              <span class="f-fl">
+                <label for="high">新的密码：</label>
+                <input type="password" name="new" id="new" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <p class="f-cb">
+              <span class="f-fl">
+                <label for="sen">确认密码：</label>
+                <input type="password" name="new2" id="new2" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <button type="submit" class="u-sub">确认修改</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    <!--主体-->
+    <div class="g-ft" style="position: absolute;width: 100%;bottom: 0;">
+      <div class="bd">
+        <div class="f-fl">
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script>
+    // alert(document.documentElement.clientWidth);
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 * 2 + "px";
+    document.querySelector(".g-doc").style.height = document.documentElement.clientHeight + "px";
+    var popMenus = document.querySelectorAll(".pop-menu li");
+    var clist = document.querySelectorAll(".change-list li");
+    Array.prototype.forEach.call(popMenus, function (v, k) {
+      v.onclick = function () {
+        document.querySelector(".pop-menu .z-crt").className = "";
+        document.querySelector(".change-list .z-crt").className = "";
+        this.className = "z-crt";
+        clist[k].className = "z-crt";
+      }
+    });
+    var menu = document.querySelector(".u-menu"),
+      nav = document.querySelector(".m-nav");
+    menu.onclick = function () {
+      if (/flipInY/.test(nav.className)) {
+        nav.className = nav.className.replace("flipInY", "flipOutY");
+        this.parentNode.style.background = "rgba(57, 168, 112, 0)";
+        this.style.borderColor = "#ccc";
+        this.className = this.className.replace(" cross", "");
+      } else {
+        nav.className = "m-nav animated flipInY";
+        this.parentNode.style.background = "rgba(57, 168, 112, 0.91)";
+        this.style.borderColor = "rgba(57, 168, 112, 0.909804)";
+        this.className += " cross"
+      }
+    };
+    var login = document.getElementById("login"),
+      popmask = document.querySelector(".m-popmask"),
+      popup = document.querySelector(".pop-out"),
+      close = document.querySelector(".pop-close");
+    login.onclick = function () {
+      popmask.style.display = "block";
+      popup.style.display = "block";
+      if (/bounceOut/.test(popup.className))
+        popup.className = popup.className.replace("bounceOut", "bounceIn");
+      else
+        popup.className += " bounceIn";
+    };
+    close.onclick = function () {
+      popmask.style.display = "none";
+      popup.className = popup.className.replace("bounceIn", "bounceOut");
+    }
+  </script>
+
+
+</body></html>
