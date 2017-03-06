@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>更多推荐</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" href="css/func.css"/>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<link rel="apple-touch-icon" href="img/touchicon.png"/>
+<script type="text/javascript" src="js/geo.js"></script>
+<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style type="text/css">
+h1{font-size: 36px; color: #39A870; line-height: 100px;}
+	.g-mn{
+		width: 1011px;
+    	margin: auto;
+		height: 400px;
+		margin: auto;
+		background-color: #F7F7F7;
+	}
+  .g-bd{
+    background: #F7F7F7;
+    padding: 80px 0;
+  }
+	.top{
+		width: 100%;
+		height: 70px;
+	}
+	.top h1{
+		color: #43AB76;
+		text-align: center;
+		line-height: 70px;
+	}
+	.rec{
+		width: 50%;
+		margin: auto;
+		line-height: 370%;
+	}
+	select{
+		height: 28px;
+	}
+	#b{
+		margin-left: 38px;
+	}
+	.bottom{
+		width:50%;
+		height: 50px;
+		margin: auto;
+		text-align: center;
+		background-color: #FF0000;
+		line-height: 50px;
+	}
+	.bottom a{
+		display: block;
+		width:100%;
+		height: 50px;
+		text-decoration:none ;
+		color: white;
+	}
+</style>
+<body onload="setup();preselect();promptinfo()">
+<div class="g-doc">
+    <!-- 头部 -->
+    <div class="g-hd f-cb" style="height: 70px">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 头部 -->
+    <div class="g-bd">
+        <div class="g-mn">
+            <div class="top">
+            	<h1>更多推荐</h1>
+            </div>
+            <table class="rec">
+            	<tr>
+            		<td style="font-weight: bold;">
+            			城市
+            		</td>
+            		<td colspan="2">
+            			<select name="" id="s1">
+							<option value=""></option>
+						</select>
+						<select name="" id="s2">
+							<option value="" ></option>
+						</select>
+            		</td>
+            	</tr>
+            	<tr>
+            		<td style="font-weight: bold;">
+            			性别
+            		</td>
+            		<td colspan="2">
+            			<input type="radio" name="sexa" id="a" value="men" /><label for="a">男</label>
+            			<input type="radio" name="sexa" id="b" value="women" /><label for="b">女</label>
+            		</td>
+            	</tr>
+            	<tr>
+            		<td style="font-weight: bold;">
+            			年龄
+            		</td>
+            		<td>
+            			<select name="" id="district">
+            				<option value="">18</option>
+						</select>
+						<span>-</span>
+						<select name="" id="bigger">
+							<option value="">24</option>
+						</select>
+            		</td>
+            	</tr>
+            	<tr>
+            		<td style="font-weight: bold;">
+            			认证
+            		</td>
+            		<td colspan="2">
+            			<input type="radio" name="rena" id="c" value="done" /><label for="c">已认证</label>
+            			<input type="radio" name="rena" id="d" value="none" /><label for="d">未认证</label>
+            		</td>
+            	</tr>
+            </table>
+            <div class="bottom">
+            	<p><a href="#">立即搜索</a></p>
+            </div>
+        </div>
+        <div class="g-sd">
+            
+        </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+	function promptinfo(){
+		var s1 = document.getElementById("s1").value;
+		var s2 = document.getElementById("s2").value;
+		dizhi = "" + s1 + s2;
+		return dizhi;
+	}
+	
+	 for (var i = 19; i < 100; i++){
+        $("#district").append("<option>" + i + "</option>");
+    }
+	 for (var j = 25; j < 100; j++) {
+	 	$("#bigger").append("<option>"+j+"</option>");
+	 }
+</script>
+</body>
+</html>

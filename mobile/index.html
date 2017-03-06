@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>爽一下</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="apple-touch-icon" href="img/touchicon.png"/>
+</head>
+<body>
+  <div class="g-doc swiper-container swiper-container-out">
+    <div class="g-hd f-tss menu-button">
+      <div class="u-menu f-tss">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+      </div>
+      <ul class="m-nav animated flipOutY f-tss">
+        <li id="login"><a href="#">登录/注册</a></li>
+        <li><a href="index.html" class="z-crt">首页</a></li>
+        <li><a href="#">项目服务</a></li>
+        <li><a href="#">技师直约</a></li>
+        <li><a href="#">成为技师</a></li>
+      </ul>
+    </div>
+    <!-- 弹窗 -->
+    <div class="m-popmask"></div>
+    <div class="pop-out animated">
+      <button class="pop-close">+</button>
+      <div class="m-pop">
+        <ul class="pop-menu">
+          <li class="z-crt">技师登录</li>
+          <li>技师注册</li>
+          <li>客户登录</li>
+          <li>客户注册</li>
+        </ul>
+          <ul class="change-list">
+            <!-- 技师登录 -->
+            <li class="z-crt">
+              <form action="/">
+                <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"  required placeholder="手机号/邮箱"  autocomplete="off"/>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required placeholder="密码6-16位" />
+                <input type="submit" class="u-btn" value="登  录">
+              </form>
+            </li>
+            <!-- 技师注册 -->
+            <li>
+              <form action="/">
+                <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"  required placeholder="手机号/邮箱"  autocomplete="off"/>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required placeholder="密码6-16位" />
+                <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" placeholder="确认密码" />
+                <input type="submit" class="u-btn" value="注  册">
+              </form>
+            </li>
+            <!-- 客户登录 -->
+            <li>
+              <form action="/">
+                <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"  required placeholder="手机号/邮箱"  autocomplete="off"/>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required placeholder="密码6-16位" /> 
+                <input type="submit" class="u-btn" value="登  录">
+              </form>
+            </li>
+            <!-- 客户注册 -->
+            <li>
+              <form action="/">
+                <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"  required placeholder="手机号/邮箱"  autocomplete="off"/>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required placeholder="密码6-16位" />
+                <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" placeholder="确认密码" />
+                <input type="submit" class="u-btn" value="注  册">
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- 弹窗 -->
+    <div class="g-bd swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="m-banner" style="background-image: url(img/banner.jpg);">
+          <img src="img/logo.png" class="m-logo ani" alt="" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s">
+          <h2 class="ani" swiper-animate-effect="swing" swiper-animate-duration="0.5s">上门按摩第一品牌</h2>
+        </div>
+        <div class="m-msg swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">message1</div>
+            <div class="swiper-slide">message2</div>
+            <div class="swiper-slide">message3</div>
+          </div>
+        </div>
+        <div class="m-serv swiper-container swiper-container-in ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s"  swiper-animate-delay="0.5s">
+          <h1 class="hd u-hd-bg">
+            项目服务推荐<br/>
+            <small>Project service</small>
+          </h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+            <div class="swiper-slide">
+              <p style="background-image: url(img/banner.jpg)"></p>
+              <h3>按摩</h3>
+            </div>
+          </div>
+          <div class="ft">
+            <button class="u-btn-order">一键预约</button>
+            <p style="line-height: 2em;">此预约模式为技师抢单或系统自动派单</p>
+          </div>
+        </div>
+        <span class="u-down a-loop-tb"></span>
+      </div>
+      <div class="swiper-slide m-order" style="position: relative;">
+        <div style="margin-top: .2rem;">
+          <!-- head -->
+          <h1 class="hd u-hd-bg">
+            技师直约推荐<br/>
+            <small>Technician about</small>
+          </h1>
+          <!-- body -->
+          <div class="bd">
+            <!-- tab -->
+            <ul class="m-tab">
+              <li class="z-crt">北京</li>
+              <li>北京</li>
+              <li>北京</li>
+              <li>北京</li>
+              <li class="u-more">
+                <a href="#">更多</a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="list f-cb ani" swiper-animate-effect="slideInUp" swiper-animate-duration="0.5s">
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/js1.jpg" alt="张小米">
+                  <h5><span>张小米<i class="u-vip"></i></span>23岁</h5>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="u-down a-loop-tb" style="margin-top: .2rem;"></span>
+      </div>
+      <div class="swiper-slide m-objflow">
+        <div style="margin-top: 0.2rem;">
+          <!-- head -->
+          <h1 class="hd u-hd-bg">
+            项目流程<br>
+            <small>Project process</small>
+          </h1>
+          <!-- body -->
+          <div class="swiper-container bd ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s">
+            <div class="swiper-wrapper" style="margin-top: .2rem;">
+              <div class="swiper-slide">
+                <div class="lt">
+                  <div class="pic1">
+                    <img src="img/ps1.png" alt=""/>
+                  </div>
+                  <h5>第一步</h5>
+                  <p>预约只需要几秒钟 通过我们的网站</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="md">
+                  <ul class="pic2">
+                    <img src="img/ps21.png" alt="" style="top: 20px; left: 0px;" >
+                    <img src="img/ps22.png" alt="" style="top: 20px; left: 53px;" >
+                    <img src="img/ps23.png" alt="" style="top: 20px; left: 106px;" >
+                    <img src="img/ps24.png" alt="" style="top: 7px; left: 145px;" >
+                    <img src="img/ps25.png" alt="" style="top: 0px; left: 137.8px;" >
+                  </ul>
+                  <h5>第二步</h5>
+                  <p>无论您在家、在酒店、在办公 室，按摩师都会到达您指定的 地点上门为您服务</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rt f-fr">
+                  <div class="pic3">
+                    <img src="img/ps3.png" alt="">
+                  </div>
+                  <h5>第三步</h5>
+                  <p>在您方便的时候，按摩师   会提供最顶级的按摩服务，   使您得到最佳的按摩体验。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- foorer -->
+        </div>
+        <div class="u-down a-loop-tb"></div>
+      </div>
+      <!-- 新闻 -->
+      <div class="swiper-slide m-news" style="position: relative;">
+        <!-- 行业新闻模块 -->
+        <div style="margin-top: .2rem;">
+          <!-- head -->
+          <h1 class="hd u-hd-bg">
+            行业新闻<br>
+            <small>Industry news</small>
+          </h1>
+          <!-- body -->
+          <ul class="m-news-bd swiper-container ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <li>
+                  <a href="#">
+                    <img src="img/news1.jpg" alt="2种舌头表明你血管严">
+                    <h5>2种舌头表明你血管严...</h5>
+                    <p>我们的舌为心之苗，心血主脉，现代医学 研究证实，任何病因引起的静脉瘀血...</p>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li>
+                  <a href="#">
+                    <img src="img/news1.jpg" alt="2种舌头表明你血管严">
+                    <h5>2种舌头表明你血管严...</h5>
+                    <p>我们的舌为心之苗，心血主脉，现代医学 研究证实，任何病因引起的静脉瘀血...</p>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li>
+                  <a href="#">
+                    <img src="img/news1.jpg" alt="2种舌头表明你血管严">
+                    <h5>2种舌头表明你血管严...</h5>
+                    <p>我们的舌为心之苗，心血主脉，现代医学 研究证实，任何病因引起的静脉瘀血...</p>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </ul>
+          <!-- foorer -->
+        </div>
+        <div class="u-down a-loop-tb"></div>
+      </div>
+      <div class="swiper-slide m-isrc">
+        <!-- 我们的安全保障 -->
+        <div style="margin-top: .2rem">
+          <div class="bd">
+            <h1 class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s">我们的安全保障</h1>
+            <img src="img/safe.png" alt="我们的安全保障" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">我们的安全保障，我们尽可能的提供最佳的安全保障，我们是为数不
+              多的随时对消费者身份进行验证，我们同样会对按摩技师进行检查验证，并精心挑选我们的技师团队。</p>
+            </div>
+          </div>
+          <div class="ft u-down a-loop-tb"></div>
+        </div>
+        <div class="swiper-slide m-ready" style="position: relative;">
+          <div style="margin-top: .5rem; margin-bottom: .3rem;">
+            <h1 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s">准备好来按摩了吗？<br>
+              <small>某一天，预约按摩，瞬间轻松.....</small>
+            </h1>
+            <button class="u-btn-order ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s"  swiper-animate-delay="1s">一键预约</button>
+            <p><img src="img/ready.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"  swiper-animate-delay="0.5s"></p>
+          </div>
+          <div class="g-ft" style="position: absolute; bottom: 0; width: 100%">
+            <div class="bd">
+              <div class="f-fl">
+                <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+                <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.1.jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+    <script>
+      // alert(document.documentElement.clientWidth);
+      document.documentElement.style.fontSize = document.documentElement.clientWidth/6.4*2 + "px";
+      var mySwiper = new Swiper('.swiper-container-out', {
+        height: $(window).height(),
+        direction : 'vertical',
+        nextButton:'.u-down',
+        onInit: function(swiper){ 
+          swiperAnimateCache(swiper); 
+          swiperAnimate(swiper); 
+        }, 
+        onSlideChangeEnd: function(swiper){ 
+          swiperAnimate(swiper); 
+        } 
+      });
+      var mySwiper2 = new Swiper('.swiper-container-in',{
+        autoplay: 5000,
+        slidesPerView : 4,
+      });
+      var mySwiper3 = new Swiper('.swiper-container.bd', {
+        autoplay: 5000,
+      });
+      var mySwiper4 = new Swiper('.swiper-container.m-news-bd', {
+        autoplay: 5000,
+        effect : 'coverflow',
+        lazyLoading : true,
+      });
+      var mySwiper5 = new Swiper('.swiper-container.m-msg', {
+        autoplay: 5000,
+        direction : 'vertical',
+      });
+      var popMenus = document.querySelectorAll(".pop-menu li");
+      var clist = document.querySelectorAll(".change-list li");
+      Array.prototype.forEach.call(popMenus, function(v, k) {
+        v.onclick = function() {
+          document.querySelector(".pop-menu .z-crt").className = "";
+          document.querySelector(".change-list .z-crt").className = "";
+          this.className = "z-crt";
+          clist[k].className = "z-crt";
+        }
+      });
+      var menu = document.querySelector(".u-menu"),
+      nav = document.querySelector(".m-nav");
+      menu.onclick = function() {
+        if(/flipInY/.test(nav.className)) {
+          nav.className = nav.className.replace("flipInY", "flipOutY");
+          this.parentNode.style.background = "rgba(57, 168, 112, 0)";
+          this.style.borderColor = "#ccc";
+          this. className = this.className.replace(" cross", "");
+        } else {
+          nav.className = "m-nav animated flipInY";
+          this.parentNode.style.background = "rgba(57, 168, 112, 0.91)";
+          this.style.borderColor = "rgba(57, 168, 112, 0.909804)";
+          this.className += " cross"
+        }
+      };
+      var login = document.getElementById("login"),
+          popmask = document.querySelector(".m-popmask"),
+          popup = document.querySelector(".pop-out"),
+          close = document.querySelector(".pop-close");
+      login.onclick = function() {
+        popmask.style.display = "block";
+        popup.style.display = "block";
+        if(/bounceOut/.test(popup.className))
+          popup.className = popup.className.replace ("bounceOut", "bounceIn");
+        else
+          popup.className += " bounceIn";
+      };
+      close.onclick = function() {
+        popmask.style.display = "none";
+        popup.className = popup.className.replace ("bounceIn", "bounceOut");
+      }
+    </script>
+  </body>
+  </html>

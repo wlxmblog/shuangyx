@@ -1,0 +1,52 @@
+textarea,
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password]{width: 100%;height: 30px;border: none;background: #E8E8E8;text-indent: 1em;}
+textarea{ line-height: 1.5em; padding: .5em }
+h1{font-size: 36px; color: #39A870; line-height: 100px;}
+p span{display: inline-block; width: 48%}
+p label{display: block; padding: 5px 0}
+b{display: block; width: 100%; line-height: 50px}
+b input[type=radio]{margin-left: 40px}
+button.u-sub{height: 30px}
+caption{border-bottom: 1px solid #ccc; padding: 10px 0}
+tr{border-bottom: 1px solid #ccc; text-align: center; color: #999}
+tr:hover{background: rgba(0,0,0,.1)}
+/* 统一清除浮动 */
+.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+.g-bdc,.m-dimg ul,.u-tab{zoom:1;}
+/* 布局 */
+.g-doc{background: url(../images/js-bg.jpg) center no-repeat; background-size: cover; background-attachment: fixed;}
+.g-bd a,td>span{color: #39A870}
+.g-bd a:hover{color: orange; text-decoration: underline}
+.g-bd{width: 1011px; margin: 0 auto; overflow: hidden; margin-bottom: 50px; margin-top: 100px;padding: 10px}
+.g-bd p{overflow: hidden;}
+.g-sd{float: left; width: 300px; background: rgba(0, 0, 0, 0.08); border-top-left-radius: 50px; font-weight: bold; font-size: 16px}
+.g-sd h1{font-size: 20px; text-indent: 2em}
+.g-sd li,
+.g-sd .exit{height: 45px; line-height: 45px; text-indent: 1em; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; cursor: pointer}
+.g-sd li span,
+.g-sd .exit span{float: right; text-indent: -2em; font-family: serif}
+.g-sd li.z-crt{background: #39A870; color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd li:hover,
+.g-sd .exit:hover{background: rgba(57, 168, 112, 0.48); color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd .hd{padding-bottom: 50px; border-bottom: 2px dashed #ccc}
+.g-mn{float: right; width: 600px; padding: 50px 0}
+/* 模块 */
+.m-hdpic{position: static; width: 100px; height: 100px; float: left;}
+.m-photos{padding: 20px 0; margin-left: -20px}
+.m-photos>li{float: left; width: 120px; height: 120px; line-height: 120px; border: 2px solid #ccc; text-align: center; font-size: 100px; color: #ccc; cursor: pointer; margin-left: 20px}
+.m-orderAdmin{padding: 20px 0; width: 100%; color: #999}
+.m-orderAdmin b,
+.m-income span.ispayed{color: #F00}
+.m-orderAdmin b.ispayed{color: orange}
+.m-balance tr{border: none; font-weight: bold;}
+/* 元件 */
+.u-sub{width: 50%; height: 55px; margin-top: 20px; background: #F00; border: none; color: #FFF; font-size: 20px; -webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+.u-sub:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
+/* 功能 */
+.f-tac{text-align:center}
+/* 皮肤 */
+.s-fc,a.s-fc:hover{color:#fff;}

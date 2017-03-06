@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>爽一下</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/login.css"/>
+  <link rel="stylesheet" href="css/func.css">
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link rel="apple-touch-icon" href="images/touchicon.png"/>
+  <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+  <div class="g-doc">
+    <!-- 头部 -->
+    <div class="g-hd f-cb">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 70px"></div>
+    </div>
+    <div class="g-bd">
+      <div class="g-mn m-login">
+        <ul class="m-tab">
+          <li class="z-crt">技师</li>
+          <li>客户</li>
+          <li>注册</li>
+        </ul>
+        <div class="m-jsup f-db card">
+          <h1 class="hd">技师登录爽一下</h1>
+          <form action="/">
+            <p>
+              <label for="username">账号：</label>
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"  required placeholder="手机号/邮箱"  autocomplete="off"/>
+            </p>
+            <p>
+              <label for="password">密码：</label>
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required />
+            </p>
+            <a href="#">忘记登录密码？</a>
+            <button type="submit" class="u-sub">登 录</button>
+          </form>
+        </div>
+        <div class="m-khup card">
+          <h1 class="hd">客户登录爽一下</h1>
+          <form action="/">
+            <p>
+              <label for="username">账号：</label>
+              <input type="text" name="username" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required placeholder="手机号/邮箱"  autocomplete="off"/>
+            </p>
+            <p>
+              <label for="password">密码：</label> 
+              <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="password" required />
+            </p>
+            <a href="#">忘记登录密码？</a>
+            <button type="submit" class="u-sub">登 录</button>
+          </form>
+        </div>
+        <div class="m-in card">
+          <ul class="m-tab">
+            <li class="z-crt">技师注册</li>
+            <li>客户注册</li>
+          </ul>
+          <div class="m-jsin incard f-db">
+            <h1 class="hd">技师注册爽一下</h1>
+            <form action="/" enctype="multipart/form-data">
+              <div class="outer">
+                <div class="m-hdpic a-flash">
+                  <input type="file">
+                </div>
+              </div>
+              <p>
+                <label for="username">账号：</label>
+                <input type="text" name="username" id="username" onkeyup="Form.invalid(this, /(^\d{11}$|[\d\w]+@\w+\.\w{2,6})/, '手机号或邮箱格式不正确！', '账号：')" placeholder="手机号/邮箱"  autocomplete="off"/>
+              </p>
+              <p>
+                <label for="password">密码：</label>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="jszcpass" required />
+              </p>
+              <p>
+                <label for="password2">确认密码：</label>
+                <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" />
+              </p>
+              <p>
+                <span class="f-fl">
+                  <label for="name">姓名/昵称：</label>
+                  <input type="text" name="name" minlength="2" maxlength="10" id="name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required/>
+                </span>
+                <span class="f-fr">
+                  <label for="age">年龄：</label>
+                  <input type="number" name="age" minlength="1" id="age" oninvalid="setCustomValidity('请输入正确的年龄！')" pattern="(^\w{1,3}$)" />
+                </span>
+              </p>
+              <p>
+                <span class="f-fl">
+                  <label for="high">身高：(cm)</label>
+                  <input type="number" name="high" id="high" />
+                </span>
+                <span class="f-fr">
+                  <label for="weight">体重：(kg)</label>
+                  <input type="number" name="weight" id="weight" />
+                </span>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="sen">所在地省市：(例如：四川省)</label>
+                  <input type="text" name="sen" id="sen " />
+                </span>
+                <span class="f-fr">
+                  <label for="password">户籍省市：(例如：上海市)</label>
+                  <input type="text" name="weight" id="weight" />
+                </span>
+              </p>
+              <p>
+                <label for="">职业:</label>
+                <b>
+                <input type="radio" name="job" checked />专业技师
+                  <input type="radio" name="job" />兼职技师
+                  <input type="radio" name="job" />其它
+                </b>
+              </p>
+              <p>
+                <label for="">服务项目:</label>
+                <b>
+                <input type="radio" name="serv" checked>中医按摩
+                  <input type="radio" name="serv">泰式按摩
+                  <input type="radio" name="serv">全息足疗
+                  <input type="radio" name="serv">头颈肩理疗
+                </b>
+              </p>
+              <p>
+                <label for="">服务项目:</label>
+                <b>
+                <input type="radio" name="bank" checked>银行账户
+                  <input type="radio" name="bank">支付宝账户
+                  <input type="text" name="zh" id="zh" placeholder="您的账户">
+                </b>
+              </p>
+              <p>
+                <label for="gy">自我感言：</label>
+                <textarea name="gy" id="gy" cols="30" rows="10"></textarea>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="tel">联系电话：</label>
+                  <input type="tel" name="tel" id="tel " />
+                </span>
+                <span class="f-fr">
+                  <label for="wx">微信：</label>
+                  <input type="text" name="wx" id="wx" />
+                </span>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="qq">QQ号：</label>
+                  <input type="number" name="qq" id="qq" />
+                </span>
+                <span class="f-fr">
+                  <label for="email">邮箱：</label>
+                  <input type="email" name="email" id="email" />
+                </span>
+              </p>
+              <p>
+                <label for="ss">自我说说：</label>
+                <textarea name="ss" id="ss" cols="30" rows="10"></textarea>
+              </p>
+              <p>
+                <input type="checkbox" checked disabled>我已经同意并阅读了<a href="#">使用条款</a>及<a href="#">隐私政策</a>
+              </p>
+              <button type="submit" class="u-sub">注 册</button>
+            </form>
+          </div>
+          <div class="m-khin incard">
+            <h1 class="hd">客户注册爽一下</h1>
+            <form action="/" enctype="multipart/form-data">
+              <div class="outer">
+                <div class="m-hdpic a-flash">
+                  <input type="file">
+                </div>
+              </div>
+              <p>
+                <label for="username">账号：</label>
+                <input type="text" name="username" id="username" onkeyup="Form.invalid(this, /(^\d{11}$|[\d\w]+@\w+\.\w{2,6})/, '手机号或邮箱格式不正确！', '账号：')" placeholder="手机号/邮箱"  autocomplete="off"/>
+              </p>
+              <p>
+                <label for="password">密码：</label>
+                <input type="password" name="password" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="jszcpass" required />
+              </p>
+              <p>
+                <label for="password2">确认密码：</label>
+                <input type="password" name="password2" minlength="6" maxlength="16" onkeyup="this.value=this.value.replace(/^ +| +$/g,'');
+                this.value !== document.getElementById('jszcpass').value
+                ?(this.style.outline='2px solid red')
+                :(this.style.outline='none')" id="jszcpass2" />
+              </p>
+              <p>
+                <span class="f-fl">
+                  <label for="name">姓名/昵称：</label>
+                  <input type="text" name="name" minlength="2" maxlength="10" id="name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required/>
+                </span>
+                <span class="f-fr">
+                  <label for="age">年龄：</label>
+                  <input type="number" name="age" minlength="1" id="age" oninvalid="setCustomValidity('请输入正确的年龄！')" pattern="(^\w{1,3}$)" />
+                </span>
+              </p>
+              <p>
+                <span class="f-fl">
+                  <label for="high">身高：(cm)</label>
+                  <input type="number" name="high" id="high" />
+                </span>
+                <span class="f-fr">
+                  <label for="weight">体重：(kg)</label>
+                  <input type="number" name="weight" id="weight" />
+                </span>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="sen">所在地省市：(例如：四川省)</label>
+                  <input type="text" name="sen" id="sen " />
+                </span>
+                <span class="f-fr">
+                  <label for="password">户籍省市：(例如：上海市)</label>
+                  <input type="text" name="weight" id="weight" />
+                </span>
+              </p>
+              <p>
+                <label for="">职业:</label>
+                <b>
+                <input type="radio" name="job" checked onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">专业技师
+                  <input type="radio" name="job" onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">兼职技师
+                  <input type="radio" name="job" onclick="getNextNode(this).style.display='inline-block'">其它
+                  <input type="text" name="other" id="other" style="display: none" placeholder="您的职业">
+                </b>
+              </p>
+              <p>
+                <label for="">服务项目:</label>
+                <b>
+                <input type="radio" name="serv" checked>中医按摩
+                  <input type="radio" name="serv">泰式按摩
+                  <input type="radio" name="serv">全息足疗
+                  <input type="radio" name="serv">头颈肩理疗
+                </b>
+              </p>
+              <p>
+                <label for="">服务项目:</label>
+                <b>
+                <input type="radio" name="bank" checked>银行账户
+                  <input type="radio" name="bank">支付宝账户
+                  <input type="text" name="zh" id="zh" placeholder="您的账户">
+                </b>
+              </p>
+              <p>
+                <label for="gy">自我感言：</label>
+                <textarea name="gy" id="gy" cols="30" rows="10"></textarea>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="tel">联系电话：</label>
+                  <input type="tel" name="tel" id="tel " />
+                </span>
+                <span class="f-fr">
+                  <label for="wx">微信：</label>
+                  <input type="text" name="wx" id="wx" />
+                </span>
+              </p>
+              <p class="f-cb">
+                <span class="f-fl">
+                  <label for="qq">QQ号：</label>
+                  <input type="number" name="qq" id="qq" />
+                </span>
+                <span class="f-fr">
+                  <label for="email">邮箱：</label>
+                  <input type="email" name="email" id="email" />
+                </span>
+              </p>
+              <p>
+                <label for="ss">自我说说：</label>
+                <textarea name="ss" id="ss" cols="30" rows="10"></textarea>
+              </p>
+              <p>
+                <input type="checkbox" checked disabled>我已经同意并阅读了<a href="#">使用条款</a>及<a href="#">隐私政策</a>
+              </p>
+              <button type="submit" class="u-sub">注 册</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="g-sd">
+        <img src="images/ready.png" alt="">
+      </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

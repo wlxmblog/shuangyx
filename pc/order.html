@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>一键下单</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" href="css/func.css"/>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<link rel="apple-touch-icon" href="img/touchicon.png"/>
+<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style type="text/css">
+textarea,
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password]{width: 90%;height: 55px;border: none;background: #E8E8E8;text-indent: 1em;}
+textarea{ line-height: 1.5em; padding: .5em }
+	.g-mn{
+		width: 1011px;
+		margin: auto;
+	}
+	.top{
+		width: 100%;
+		height: 70px;
+	}
+	.top p{
+		color: #43AB76;
+		font-size: 30px;
+		text-align: center;
+		line-height: 70px;
+	}
+	.rec{
+		width: 1011px;
+		margin: auto;
+		line-height: 200%;
+		color: #8F8D8E;
+	}
+	.add,.lxfs,.qqh,.bz{
+		width: 80%;
+		height: 25px;
+	}
+	.time,.wx{
+		width: 90%;
+		height: 25px;
+	}
+	.bottom a{
+    display: block;
+    width: 1011px;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FF0000;
+    line-height: 60px;
+    border-radius: 5px;
+    margin-top: 50px;
+    outline: none;
+    color: white;
+    margin-bottom: 80px;
+    border: none;
+    transition: all .5s;
+	}
+  .bottom:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
+</style>
+<body>
+<div class="g-doc">
+    <!-- 头部 -->
+    <div class="g-hd f-cb" style="height: 70px">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 70px"></div>
+    <!-- 头部 -->
+    <div class="g-bd">
+        <div class="g-mn">
+            <div class="top">
+            	<p>订单填写</p>
+            </div>
+            <form action="" method="post">
+            	<table class="rec">
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;">
+	            			项目服务
+	            		</td>
+	            	</tr>
+	            	<tr style="text-indent: 2em;">
+	            		<td>
+	            			<input type="radio" name="typea" id="a" /><label for="a">中医按摩</label>
+	            		</td>
+	            		<td>
+	            			<input type="radio" name="typea" id="b"/><label for="b">全息足疗</label>
+	            		</td>
+	            		<td>
+	            			<input type="radio" name="typea" id="c"/><label for="c">全息足疗</label>
+	            		</td>
+	            		<td>
+	            			<input type="radio" name="typea" id="d"/><label for="d">全息足疗</label>
+	            		</td>
+	            		<td>
+	            			<input type="radio" name="typea" id="e"/><label for="e">全息足疗</label>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;">
+	            			性别
+	            		</td>
+	            	</tr>
+	            	<tr style="text-indent: 2em;">
+	            		<td>
+	            			<input type="radio" name="sexb" id="f" value="men" /><label for="f">男</label>
+	            		</td>
+	            		<td>
+	            			<input type="radio" name="sexb" id="g" value="women" /><label for="g">女</label>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;" colspan="3">
+	            			服务地址
+	            		</td>
+	            		<td style="font-weight: bold; color: #474747;" colspan="2">
+	            			预约时间
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td colspan="3">
+	            			<input type="text" class="add"/>
+	            		</td>
+	            		<td colspan="2">
+	            			<input type="text" class="time"/>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;" colspan="3">
+	            			联系方式
+	            		</td>
+	            		<td style="font-weight: bold; color: #474747;" colspan="2">
+	            			微信号
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td colspan="3">
+	            			<input type="text" class="lxfs"/>
+	            		</td>
+	            		<td colspan="2">
+	            			<input type="text" class="wx"/>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;" colspan="3">
+	            			QQ号
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td colspan="3">
+	            			<input type="text" class="qqh"/>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td style="font-weight: bold; color: #474747;" colspan="3">
+	            			备注
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td colspan="3">
+	            			<input type="text" class="bz"/>
+	            		</td>
+	            	</tr>
+              </table>
+            	<div class="bottom">
+            		<a href="pay.html">提交订单</a>
+            	</div> 
+            </form>
+        </div>
+        <div class="g-sd">
+            
+        </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>

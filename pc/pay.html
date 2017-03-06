@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>客户_个人中心_订单管理_待支付</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" href="css/func.css"/>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<link rel="apple-touch-icon" href="img/touchicon.png"/>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.g-hd2{
+		width: 1011px;
+		margin: 30px auto;
+		overflow: hidden;
+	}
+	.paid{
+		text-align: center;
+		float: left;
+	}
+	.state{
+		font-size: 15px;
+		font-weight: bold;
+		color: #909090;
+	}
+	
+	.time{
+		font-size: 13px;
+		color: #979797;
+	}
+	.v{
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		text-align: center;
+		line-height: 25px;
+		margin-top: 5px;
+	}
+	.xian{
+		display: block;
+		width: 170px;
+		height: 5px;
+		background-color: #ebebeb;
+		float: left;
+		margin-top: 33px;
+		margin-left: -47px;
+		margin-right: -50px;
+	}
+	.cancle{
+		clear: both;
+		width: 100%;
+		text-align: center;
+		padding-top: 30px;
+	}
+	.cancle a{
+		display: block;
+		width: 100px;
+		height: 25px;
+		text-decoration:none ;
+		color: white;
+		text-align: center;
+		line-height: 25px;
+		background-color: orange;
+		border-radius: 5px;
+		margin:auto;
+	}
+	/**/
+	.g-bd{
+		width: 1011px;
+		margin: 10px auto;
+		overflow: hidden;
+		border: 1px solid #DDDDDD;
+    margin-bottom: 80px;
+	}
+	.g-sd{
+		width: 42%;
+		height: 300px;
+		border-right: 1px solid #DDDDDD;
+	}
+	.top{
+		height: 30px;
+		background-color: #F3F3F3;
+		border-bottom: 1px solid #DDDDDD;
+	}
+	.top p{
+		padding: 7px;
+		font-size: 14px;
+		color: #3B3B3B;
+	}
+	.bottom{
+		margin-left: 20px;
+		line-height: 200%;
+		font-size: 13px;
+		color: #000000;
+	}
+	.bottom textarea{
+		width:100%;
+		resize: none;
+		padding: 20px;
+	}
+	.g-mn{
+		width: 49%;
+		height: 300px;
+		float: right;
+	}
+	.wan{
+		width: 100%;
+		margin-top: 130px;
+	}
+	.wan p{
+		margin-left: 120px;
+		margin-top: 5px;
+	}
+	.ljzf{
+		width: 40%;
+		height: 50px;
+		margin-top: 20px;
+		margin-left: 90px;
+		background-color: red;
+		text-align: center;
+		line-height: 50px;
+		color: white;
+		border-radius: 5px;
+		
+	}
+</style>
+<body>
+<div class="g-doc">
+<!-- 头部 -->
+    <div class="g-hd f-cb" style="height: 70px">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 70px"></div>
+    <!-- 头部 -->
+    <div class="g-hd2">
+    	<div class="paid">
+    		<p class="state">已付款</p>
+    		<img src="img/grey.png" class="v"/>
+    		<p class="time">2017.2.10 13:06:10</p>
+    	</div>
+    	<span class="xian"></span>
+    	<div class="paid">
+    		<p class="state">下单成功</p>
+    		<img src="img/grey.png" class="v"/>
+    		<p class="time">2017.2.10 13:06:10</p>
+    	</div>
+    	<span class="xian"></span>
+    	<div class="paid">
+    		<p class="state">技师接单</p>
+    		<img src="img/grey.png" class="v"/>
+    		<p class="time">2017.2.10 13:08:30</p>
+    	</div>
+    	<span class="xian"></span>
+    	<div class="paid">
+    		<p class="state">技师到达</p>
+    		<img src="img/grey.png" class="v"/>
+    		<p class="time">2017.2.10 14:30:19</p>
+    	</div>
+    	<span class="xian"></span>
+    	<div class="paid">
+    		<p class="state">完成服务</p>
+    		<img src="img/grey.png" class="v"/>
+    		<p class="time">2017.2.10 16:31:50</p>
+    	</div>
+    	<div class="cancle"><a href="#">取消订单</a></div>
+    </div>
+    <div class="g-bd">
+        <div class="g-mn">
+            <div class="wan">
+            	<p>订单状态: <span class="ding">待付款</span></p>
+            	<div class="ljzf">
+            		立即支付
+            	</div>
+            </div>
+        </div>
+        <div class="g-sd">
+            <div class="top">
+            	<p>订单详情</p>
+            </div>
+            <table class="bottom">
+            	<tr>
+            		<td colspan="2">技师地址:xx省xx市具体位置信息</td>
+            	</tr>
+            	<tr>
+            		<td colspan="2">预约服务时间:2017.02.10 14:30:00</td>
+            	</tr>
+            	<tr>
+            		<td colspan="2">订单编号:1234567@163.com</td>
+            	</tr>
+            	<tr>
+            		<td colspan="2">联系电话:01234567890</td>
+            	</tr>
+            	<tr>
+            		<td>微信:shuangyixia</td>
+            		<td>QQ:1234567</td>
+            	</tr>
+            	<tr>
+            		<td colspan="2">备注:</td>
+            	</tr>
+            	<tr>
+            		<td colspan="2">
+            			<textarea name="" id="" cols="30" rows="2">请按时到达</textarea>
+            		</td>
+            	</tr>
+            </table>
+        </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</body>
+</html>

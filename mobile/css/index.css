@@ -1,0 +1,80 @@
+/* 重置 */
+div,p,ul,ol,li{margin:0;padding:0;}
+h1,h2{text-align: center;}
+h2{font-size: 24px}
+h3{text-align: center}
+
+/* 默认 */
+strong,em{font-style:normal;font-weight:bold;}
+/* 统一调用背景图 */
+/*.m-logo a,.m-nav a,.m-nav em{background:url(images/sprite.png) no-repeat 9999px 9999px;}*/
+/* 统一清除浮动 */
+.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+.g-bdc,.m-dimg ul,.u-tab{zoom:1;}
+/* 布局 */
+.g-hd{position: fixed;width: 100%;z-index: 999;}
+.g-bd{width: 100%; height: }
+.g-bd .hd{height: .7rem;/* padding: .3rem 0; */text-align: center;font-size: .25rem;margin-top: .2rem;/* -webkit-transform: scale(.7); *//* transform: scale(.7); */}
+.g-bd .hd small{font-size: .1rem;color: #999999;}
+/* 模块 */
+.m-serv{text-align: center; width: 2.8rem; overflow: hidden;}
+.m-serv .swiper-slide p{display: inline-block; width: .6rem; height: .6rem; border-radius: .5rem; border: .02rem solid #39a870; background-size: cover; background-position: center}
+.m-serv .ft{padding: .2rem 0}
+/*技师直约推荐模块*/
+.m-order{/* padding: .1rem 0; */background: url(../img/js-bg.jpg) center;background-size: cover;}
+.m-order .hd{/* padding-bottom: .15rem */}
+.m-order .bd{text-align: center}
+.m-order .m-tab{display: inline-block;}
+.m-order .m-tab li{float: left; width: .56rem; height: .3rem; line-height: .3rem; text-align: center; background: #FFF; color: #39a870; cursor: pointer}
+.m-order .m-tab .z-crt{background: #39a870; color: #FFF;}
+.m-order .m-tab li+li{margin-left: .1rem}
+.m-order .list{/* margin-top: .1rem */}
+.m-order .list li{float: left;width: .9rem;height: 1rem;margin-left: .12rem;margin-top: .1rem;background: #FFF;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;padding: .1rem 0;}
+.m-order .list a{display: block; width: .9rem; overflow: hidden;}
+.m-order .list img{height: .7rem;}
+.m-order .list h5{height: .4rem; padding: 0 .18rem; line-height: .4rem; text-align: right}
+.m-order .list span{float: left}
+/*m-objflow*/
+.m-objflow{position: relative;background: #f2f2f2;/* padding-top: .2rem; */}
+.m-objflow .bd{text-align: center;}
+.m-objflow .bd p{width: 1.80rem; line-height: .24rem; margin: 0 auto}
+.m-objflow .pic1,
+.m-objflow .pic2,
+.m-objflow .pic3{}
+.m-objflow .pic1{height: 1.21rem;}
+.m-objflow .pic2{position: relative;height: 1.21rem;text-align: center;left: .88rem;}
+.m-objflow .pic2 img{position: absolute}
+.m-objflow .pic3{height: 1.36rem;}
+.m-objflow .ft{height: .6rem;line-height: .97rem;text-align: center;}
+.m-objflow h5{line-height: .28rem}
+/*行业新闻模块*/
+.m-news{/* padding: .2rem 0; */}
+.m-news .m-news-bd{position: relative;height: 3.2rem;}
+.m-news .m-news-bd li{height: 3.2rem;-webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+.m-news .m-news-bd h5{text-indent: 2em; font-size: .16rem; text-overflow: ellipsis; white-space: nowrap; line-height: .25rem}
+.m-news .m-news-bd img{width: 100%; border-top: .01rem solid #ccc; border-bottom: .01rem solid #ccc; padding: .05rem 0}
+.m-news .m-news-bd p{text-indent: 2em; line-height: .25rem}
+.m-news .ft{text-align: center;margin-top: .2rem;}
+/*我们的安全保障*/
+.m-isrc{/* padding: .5rem 0 0; */background: #61b98d;color: #FFF;text-align: center;}
+.m-isrc h1{font-size: .3rem}
+.m-isrc img{margin: .5rem 0}
+.m-isrc p{font-size: .13rem;text-indent: 2em;line-height: .3rem;color: #FFF;padding: 0 .2rem;text-align: left;}
+.m-isrc .ft{/* margin-top: .5rem */}
+/*准备好来按摩了吗*/
+.m-ready{/* padding: .672rem 0; */text-align: center;}
+.m-ready h1{font-size: .3rem;margin-bottom: .3rem;}
+.m-ready small{font-size: .14rem; color: #999}
+.m-ready button{margin-bottom: .3rem}
+.m-ready img{width: 1.5rem}
+/* 元件 */
+.u-menu{float: right;width: .4rem;height: .4rem;border: .01rem solid #ccc;border-radius: .05rem;text-align: center;}
+.u-hd-bg{background: url(../img/hd-bg.png) center .27rem no-repeat;}
+.u-btn-order{width: 1.66rem; height: .4rem; margin-bottom: .1rem; border: none; border-radius: .18rem; -webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s; background: #39a870; text-align: center; color: #FFF}
+.u-btn-order:hover{-webkit-box-shadow: #39a870 0 0 .1rem;box-shadow: #39a870 0 0 .1rem; text-shadow: #FFF 0 0 .05rem;}
+.u-down{display: inline-block;width: .4rem;height: .29rem;padding: .1rem 0;background: url(../img/down.png) center no-repeat;}
+/* 功能 */
+.f-tac{text-align:center}
+.f-tss{-webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s}
+/* 皮肤 */
+.s-fc,a.s-fc:hover{color:#fff;}

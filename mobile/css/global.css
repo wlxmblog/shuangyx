@@ -1,0 +1,115 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:14px/1.14 '微软雅黑',\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+input[type=text],
+input[type=password]{width: 97%;height: .4rem;margin: .2rem 0;border: none;border-radius: .1rem;background: #eee;text-indent: 2em;}
+input[type=text]:focus,
+input[type=password]:focus{box-shadow: #0f0 0 0 .05rem}
+.a-loop-tb{animation: loopTb ease-in-out 2s infinite; -webkit-animation: loopTb ease-in-out 2s infinite;}
+-webkit-@keyframes loopTb {
+  0%{transform: translateY(10px); opacity: 1}
+  50%{transform: translateY(0); opacity: 0.5}
+  80%{transform: translateY(-10px); opacity: 0}
+  100%{transform: translateY(0); opacity: 1}
+}
+@keyframes loopTb {
+  0%{transform: translateY(10px); opacity: 1}
+  50%{transform: translateY(0); opacity: 0.5}
+  80%{transform: translateY(-10px); opacity: 0}
+  100%{transform: translateY(0); opacity: 1}
+}
+
+/*menu*/
+.menu-button:hover .bar:nth-of-type(1) {
+  -webkit-transform: translateY(1.5px) rotate(-4.5deg);
+  -ms-transform: translateY(1.5px) rotate(-4.5deg);
+  transform: translateY(1.5px) rotate(-4.5deg);
+}
+.menu-button:hover .bar:nth-of-type(2) {
+  opacity: .9;
+}
+.menu-button:hover .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-1.5px) rotate(4.5deg);
+  -ms-transform: translateY(-1.5px) rotate(4.5deg);
+  transform: translateY(-1.5px) rotate(4.5deg);
+}
+
+.cross .bar:nth-of-type(1) {
+  -webkit-transform: translateY(15px) rotate(-45deg);
+  -ms-transform: translateY(15px) rotate(-45deg);
+  transform: translateY(15px) rotate(-45deg);
+}
+.cross .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.cross .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  -ms-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-15px) rotate(45deg);
+}
+.cross:hover .bar:nth-of-type(1) {
+  -webkit-transform: translateY(13.5px) rotate(-40.5deg);
+  -ms-transform: translateY(13.5px) rotate(-40.5deg);
+  transform: translateY(13.5px) rotate(-40.5deg);
+}
+.cross:hover .bar:nth-of-type(2) {
+  opacity: .1;
+}
+.cross:hover .bar:nth-of-type(3) {
+  -webkit-transform: translateY(-13.5px) rotate(40.5deg);
+  -ms-transform: translateY(-13.5px) rotate(40.5deg);
+  transform: translateY(-13.5px) rotate(40.5deg);
+}
+
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+/*布局*/
+/*底部*/
+.g-ft{border-top: .05rem solid #39a870; background: #333;color: #ccc; font-size: 12px}
+.g-ft .bd{ overflow: hidden; line-height: .24rem}
+.g-ft .bd ul{}
+.g-ft .bd li{float: left; color: #FFF}
+.g-ft .bd p{text-align: center;}
+.g-ft .bd .f-fr{text-align: center}
+/*模块*/
+.u-down.a-loop-tb{position: absolute;bottom: .1rem;left: 50%;margin-left: -.2rem;}
+.m-nav{position: fixed;width: 100%;text-align: center;background: rgba(57, 168, 112, 0.91);margin-top: .4rem; border-radius: 0 0 .5rem .5rem/ .1rem .1rem;}
+.m-nav a{color: #eee}
+.m-nav li{width: 100%;height: .5rem;line-height: .5rem; -webkit-transition: all .5s;transition: all .5s}
+.m-nav li:hover{background: rgba(133, 189, 161, 0.6); border-radius: 0 0 .5rem .5rem/ .1rem .1rem}
+.m-banner{padding: .1rem;height: 1.1rem;text-align: center;background-repeat: no-repeat;background-position: center;background-size: cover;border-bottom: .01rem solid #ccc;}
+.m-banner h2{color: #A2186D}
+.m-logo{width: 1.3rem;}
+.m-msg{padding: 0 .1rem; height: .3rem; line-height: .3rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; border-bottom: .01rem solid #ccc}
+.m-popmask{position: fixed; display: none;width: 100%;height: 100%;background: rgba(0,0,0,.5);-webkit-filter: blur(20px);z-index: 998;}
+.pop-out{display: none;position: fixed;z-index: 999;width: 3rem;height: 4.2rem;left: 50%;top: 50%;margin: -2.1rem 0 0 -1.5rem;}
+.m-pop{position: relative; width: 2.6rem;height: 3.8rem;left: 50%;top: 50%;padding: .1rem;margin: -2rem 0 0 -1.4rem;background: #fff;border-radius: .1rem;z-index: 999;}
+.m-pop>.pop-menu{padding: .2rem 0;overflow: hidden;}
+.m-pop>.pop-menu li{float: left; width: 25%; text-align: center; line-height: .3rem; background: #eee;-webkit-transition: all .5s;transition: all .5s;}
+.m-pop>.pop-menu li.z-crt,
+.m-pop>.pop-menu li:hover{background: orange;color: #fff;outline: 5px solid rgb(255, 165, 0);}
+.m-pop .change-list li{position: absolute; opacity: 0; -webkit-transition: all 1s;transition: all 1s; z-index: -1}
+.m-pop .change-list li.z-crt{opacity: 1; z-index: 1;}
+.pop-close{position: absolute;width: 0.3rem;height: .3rem;right: -.1rem;color: rgba(246, 116, 116, 0.61);font-size: .25rem;font: .5rem/1 "微软雅黑";top: -.15rem;transform: rotate(45deg);z-index: 10000;border-radius: 50% !important;background: rgba(17, 10, 10, 0);border: none;text-shadow: #F00 0 0 .1rem;}
+/*元件*/
+.u-menu i{display: inline-block;width: 45px;height: 5px;border-radius: 5px;background: rgba(0,0,0,.3); -webkit-transition: all .5s;transition: all .5s;}
+.u-btn{width: 97%;height: .4rem;border-radius: 5px;color: #FFF;border: none;background: orange;line-height: 50px;text-align: center;margin-top: .2rem;}
+.u-btn:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}

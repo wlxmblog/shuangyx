@@ -1,0 +1,97 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:14px/1.14 "Microsoft YaHei",\5fae\8f6f\96c5\9ed1,arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+p{color: #999;}
+
+/*动画*/
+.a-to-tp{animation: totp ease-in .5s; animation-fill-mode: forwards;}
+@keyframes totp {
+  from{transform: translateY(100px); opacity: 0}
+  to{transform: translateY(0); opacity: 1}
+}
+.a-to-bt{animation: tobt ease-in .5s; animation-fill-mode: forwards;}
+@keyframes tobt {
+  from{transform: translateY(-100px); opacity: 0}
+  to{transform: translateY(0); opacity: 1}
+}
+.a-to-rt{animation: tort ease-in .5s; animation-fill-mode: forwards;}
+@keyframes tort {
+  from{transform: translateX(-100px); opacity: 0}
+  to{transform: translateX(0); opacity: 1}
+}
+.a-to-lt{animation: tolt ease-in .5s; animation-fill-mode: forwards;}
+@keyframes tolt {
+  from{transform: translateX(100px); opacity: 0}
+  to{transform: translateX(0); opacity: 1}
+}
+.a-loop-tb{animation: loopTb ease-in-out 2s infinite;}
+@keyframes loopTb {
+  0%{transform: translateY(10px); opacity: 1}
+  50%{transform: translateY(0); opacity: 0.5}
+  80%{transform: translateY(-10px); opacity: 0}
+  100%{transform: translateY(0); opacity: 1}
+}
+.a-flash{animation: flash 1s ease-in-out alternate infinite; cursor: pointer;}
+.a-flash:hover{animation: flash2 1s ease-in-out alternate infinite}
+@keyframes flash {
+  from{box-shadow: #FFF 0 0 5px}
+  to{box-shadow: #39A870 0 0 10px}
+}
+@keyframes flash2 {
+  from{box-shadow: #FFF 0 0 5px}
+  to{box-shadow: #39A870 0 0 25px}
+}
+/*布局*/
+.g-hd{overflow: hidden}
+.g-top{position: absolute; width: 100%; box-shadow: #ccc 3px 0 20px}
+/*底部*/
+.g-ft{border-top: 5px solid #39a870; background: #333}
+.g-ft .bd{width: 1011px; margin: 0 auto; padding: 57px 0; overflow: hidden; line-height: 24px}
+.g-ft .bd ul{}
+.g-ft .bd li{float: left; color: #FFF}
+.g-ft .bd a{color: #FFF}
+.g-ft .bd .f-fr{text-align: center}
+/*模块*/
+/*banner*/
+.m-banner{height: 470px; margin-top: 70px}
+/*msg*/
+.m-msg{height: 50px; background: #fafafa}
+.m-msg>ul{width: 1011px; margin: 0 auto; line-height: 50px}
+.m-navbar{height: 70px; width: 1011px; margin: 0 auto; overflow: hidden}
+.m-tlogo{height:70px; line-height: 70px;}
+.m-tlogo img{vertical-align: middle; border-right: 1px solid #ccc; margin-right: 19px; padding-right: 15px}
+.m-tlogo span{font-size: 18px}
+/*导航栏*/
+.m-nav{height: 70px; line-height: 70px}
+.m-nav li{float: left}
+.m-nav .z-crt{font-size: 18px; font-weight: bold; color: #39a870}
+.m-nav li+li{margin-left: 44px}
+.m-nav li:hover a{font-size: 18px; font-weight: bold; color: #39a870}
+.m-msg a{display: none;}
+.m-flogo{font-size: 30px; font-weight: bold; color: #999; padding-bottom: 15px}
+/*登录注册页*/
+.m-hdpic{width: 150px; height: 150px;  border-radius: 50%; background: url(../images/js1.jpg) center no-repeat; background-size: cover; border: 3px solid #39A870}
+.m-hdpic input{width: 100%; height: 100%; border-radius: 50%; opacity: 0; filter:alpha(opacity=0); cursor: pointer;}
+.incard{display: none; position: relative}
+/*元件*/
+.u-login{display: inline-block; height:32px; width:32px; vertical-align: middle; background: url(../images/sprite.png); background-position: 0 -34px}
+.u-btn{width: 200px; height: 50px; border-radius: 5px; color: #FFF; border: none; background: orange; line-height: 50px; text-align: center;}
+.u-btn:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}

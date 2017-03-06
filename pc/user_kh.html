@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>爽一下</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/ucenter.css"/>
+  <link rel="stylesheet" href="css/func.css">
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link rel="apple-touch-icon" href="images/touchicon.png"/>
+  <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+  <div class="g-doc">
+    <!-- 头部 -->
+    <div class="g-hd f-cb">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 70px"></div>
+    </div>
+    
+    <div class="g-bd">
+      <div class="g-sd">
+        <div class="hd f-cb">
+          <div class="m-hdpic">
+            <input type="file" name="hd" id="hd">
+          </div>
+          <h1>技师个人中心</h1>
+        </div>
+        <ul>
+          <li>高级认证<span>&gt;</span></li>
+          <li class="z-crt">修改个人资料<span>&gt;</span></li>
+          <li>相册管理<span>&gt;</span></li>
+          <li>订单管理<span>&gt;</span></li>
+          <li>网币余额<span>&gt;</span></li>
+          <li>充值<span>&gt;</span></li>
+          <li>修改密码<span>&gt;</span></li>
+          <li>系统消息通知<span>&gt;</span></li>
+        </ul>
+        <div class="exit">退出<span>&gt;</span></div>
+      </div>
+      <div class="g-mn m-ucenter">
+        <table class="m-apply incard" width="600">
+          <caption>会员vip介绍升级加v，可以直接看到任何技师的任何联系方式</caption>
+          <tr>
+            <td width="200" height="55"><input type="radio" name="jis" />专业技师</td>
+            <td width="200">按摩时长1小时</td>
+            <td width="200">88/年</td>
+          </tr>
+          <tr>
+            <td height="55"><input type="radio" name="jis" />专业技师</td>
+            <td>按摩时长1小时</td>
+            <td>88/年</td>
+          </tr>
+          <tr>
+            <td height="55"><input type="radio" name="jis" />专业技师</td>
+            <td>按摩时长1小时</td>
+            <td>88/年</td>
+          </tr>
+          <tr>
+            <td colspan="3" height="70"><button class="u-btn">开通vip会员</button></td>
+          </tr>
+        </table>
+        <div class="m-cginfo incard f-db">
+          <form action="/" enctype="multipart/form-data">
+            <p>账号：123@qq.com</p>
+            <input type="hidden" name="hdpic" id="hdpic">
+            <script type="text/javascript">
+              (function() {
+                var file = document.getElementById("hd"),
+                    fileup = document.getElementById("hdpic");
+                file.onchange = function() {
+                  fileup.value = "";
+                };
+              })();
+            </script>
+            <p>
+              <span class="f-fl">
+                <label for="name">姓名/昵称：</label>
+                <input type="text" name="name" minlength="2" maxlength="10" id="name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required/>
+              </span>
+              <span class="f-fr">
+                <label for="age">年龄：</label>
+                <input type="number" name="age" minlength="1" id="age" oninvalid="setCustomValidity('请输入正确的年龄！')" pattern="(^\w{1,3}$)" />
+              </span>
+            </p>
+            <p>
+              <span class="f-fl">
+                <label for="high">身高：(cm)</label>
+                <input type="number" name="high" id="high" />
+              </span>
+              <span class="f-fr">
+                <label for="weight">体重：(kg)</label>
+                <input type="number" name="weight" id="weight" />
+              </span>
+            </p>
+            <p class="f-cb">
+              <span class="f-fl">
+                <label for="sen">所在地省市：(例如：四川省)</label>
+                <input type="text" name="sen" id="sen " />
+              </span>
+              <span class="f-fr">
+                <label for="password">户籍省市：(例如：上海市)</label>
+                <input type="text" name="weight" id="weight" />
+              </span>
+            </p>
+            <p>
+              <label for="">职业:</label>
+              <b>
+                <input type="radio" name="job" checked onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">专业技师
+                <input type="radio" name="job" onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">兼职技师
+                <input type="radio" name="job" onclick="getNextNode(this).style.display='inline-block'">其它
+                <input type="text" name="other" id="other" style="display: none" placeholder="您的职业">
+              </b>
+            </p>
+            <p>
+              <label for="">服务项目:</label>
+              <b>
+                <input type="radio" name="serv" checked>中医按摩
+                <input type="radio" name="serv">泰式按摩
+                <input type="radio" name="serv">全息足疗
+                <input type="radio" name="serv">头颈肩理疗
+              </b>
+            </p>
+            <p>
+              <label for="">结算账户:</label>
+              <b>
+                <input type="radio" name="bank" checked>银行账户
+                <input type="radio" name="bank">支付宝账户
+                <input type="text" name="zh" id="zh" placeholder="您的账户">
+              </b>
+            </p>
+            <p>
+              <label for="gy">自我感言：</label>
+              <textarea name="gy" id="gy" cols="30" rows="10"></textarea>
+            </p>
+            <p class="f-cb">
+              <span class="f-fl">
+                <label for="tel">联系电话：</label>
+                <input type="tel" name="tel" id="tel " />
+              </span>
+              <span class="f-fr">
+                <label for="wx">微信：</label>
+                <input type="text" name="wx" id="wx" />
+              </span>
+            </p>
+            <p class="f-cb">
+              <span class="f-fl">
+                <label for="qq">QQ号：</label>
+                <input type="number" name="qq" id="qq" />
+              </span>
+              <span class="f-fr">
+                <label for="email">邮箱：</label>
+                <input type="email" name="email" id="email" />
+              </span>
+            </p>
+            <p>
+              <label for="ss">自我说说：</label>
+              <textarea name="ss" id="ss" cols="30" rows="10"></textarea>
+            </p>
+            <button type="submit" class="u-sub">确认修改</button>
+          </form>
+        </div>
+        <ul class="m-photos incard">
+          <li>+</li>
+          <li>+</li>
+          <li>+</li>
+        </ul>
+        <table class="m-orderAdmin incard">
+          <caption>订单管理</caption>
+          <thead>
+            <tr>
+              <td width="150" height="55">时间</td>
+              <td width="150">最新用户订单名称</td>
+              <td width="150">交易状态</td>
+              <td width="150">详情</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td height="55">2017-02-1</td>
+              <td><span>最新用户订单名称</span></td>
+              <td><b class="ispayed">已付款</b></td>
+              <td><a href="khcenter.html">详情</a></td>
+            </tr>
+            <tr>
+              <td height="55">2017-02-1</td>
+              <td><span>最新用户订单名称</span></td>
+              <td><b>未付款</b></td>
+              <td><a href="khcenter.html">详情</a></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td height="55"><a>首页</a></td>
+              <td><a>上一页</a></td>
+              <td><a>下一页</a></td>
+              <td><a>尾页</a></td>
+            </tr>
+          </tfoot>
+        </table>
+        <table class="m-balance incard">
+          <caption>爽币余额</caption>
+            <tr>
+              <td width="600" height="55" align="left">2017元</td>
+            </tr>
+        </table>
+        <form action="/">
+          <table class="m-balance incard">
+            <caption>余额：2017元</caption>
+              <tr>
+                <td width="150" height="55" align="left"><input type="radio" name="pay" value="66" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'" checked>66爽币</td>
+                <td width="150" height="55" align="left"><input type="radio" name="pay" value="166" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">166爽币</td>
+                <td width="150" height="55" align="left"><input type="radio" name="pay" value="236" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">236爽币</td>
+                <td width="150" height="55" align="left"><input type="radio" name="pay" value="366" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">366爽币</td>
+              </tr>
+              <tr>
+                <td colspan="4" align="left" style="color: #f00" id="ispay">需支付：66元</td>
+              </tr>
+              <tr>
+                <td colspan="4" height="85"><button type="submit" class="u-sub" style="background: #39A870; margin: 0">立即充值</button></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <table>
+                    <caption>历史充值记录</caption>
+                    <thead>
+                      <tr>
+                        <td width="150" height="55">时间</td>
+                        <td width="200">充值金额</td>
+                        <td width="250" colspan="2">实际支付</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td height="55">2017.01.01</td>
+                        <td>200爽币</td>
+                        <td colspan="2">-200.00</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td height="55"><a>首页</a></td>
+                        <td><a>上一页</a></td>
+                        <td><a>下一页</a></td>
+                        <td width="150"><a>尾页</a></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </td>
+              </tr>
+          </table>
+        </form>
+        <div class="m-repass incard">
+          <form action="/" enctype="multipart/form-data">
+            <p>
+              <span class="f-fl">
+                <label for="name">当前密码：</label>
+                <input type="password" name="old" id="old" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <p>
+              <span class="f-fl">
+                <label for="high">新的密码：</label>
+                <input type="password" name="new" id="new" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <p class="f-cb">
+              <span class="f-fl">
+                <label for="sen">确认密码：</label>
+                <input type="password" name="new2" id="new2" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required="">
+              </span>
+            </p>
+            <button type="submit" class="u-sub">确认修改</button>
+          </form>
+        </div>
+        <table class="m-sysmsg incard">
+          <caption>系统消息通知</caption>
+          <tr>
+            <td width="300" height="55" align="left">您有一条消息</td>
+            <td width="300" align="right"><a href="#">查看</a></td>
+          </tr>
+          <tr>
+            <td width="300" height="55" align="left">您有一条消息</td>
+            <td width="300" align="right"><a href="#">查看</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/ucenter.js"></script>
+</body>
+</html>
