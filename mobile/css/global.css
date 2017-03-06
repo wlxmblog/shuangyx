@@ -89,7 +89,7 @@ textarea{ line-height: 1.5em; padding: .5em }
 /*布局*/
 /*底部*/
 .g-ft{border-top: .05rem solid #39a870; background: #333;color: #ccc; font-size: 12px}
-.g-ft .bd{ overflow: hidden; line-height: .24rem}
+.g-ft .bd{overflow: hidden;line-height: 24px;}
 .g-ft .bd li{float: left; color: #FFF}
 .g-ft .bd p{text-align: center;}
 .g-ft .bd .f-fr{text-align: center}
