@@ -1,4 +1,4 @@
-input, textarea{margin: 0 !important}
+.m-cginfo input, .m-cginfo textarea{margin: 0 !important}
 h1{font-size: .2rem; color: #39A870; line-height: .8rem;}
 p span{display: inline-block; width: 48%}
 p label{display: block; padding: 5px 0}
