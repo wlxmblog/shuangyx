@@ -15,7 +15,7 @@ caption{border-bottom: 1px solid #ccc; padding: 10px 0}
 tr{border-bottom: 1px solid #ccc; text-align: center; color: #999}
 tr:hover{background: rgba(0,0,0,.1)}
 /* 统一清除浮动 */
-.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.'}
 .g-bdc,.m-dimg ul,.u-tab{zoom:1;}
 /* 布局 */
 .g-doc{background: url(../images/js-bg.jpg) center no-repeat; background-size: cover; background-attachment: fixed;}
