@@ -1,52 +1,85 @@
+@charset "utf-8";
 textarea,
 input[type=text],
 input[type=email],
 input[type=tel],
 input[type=number],
-input[type=password]{width: 100%;height: 30px;border: none;background: #E8E8E8;text-indent: 1em;}
+input[type=password]{width: 55%;height: 30px;border: none;background: #E8E8E8;text-indent: 1em;}
 textarea{ line-height: 1.5em; padding: .5em }
-h1{font-size: 36px; color: #39A870; line-height: 100px;}
-p span{display: inline-block; width: 48%}
+h1{font-size: 36px;color: #39A870;line-height: 100px;text-align: center;}
+p span{display: inline-block;width: 100%;}
 p label{display: block; padding: 5px 0}
 b{display: block; width: 100%; line-height: 50px}
 b input[type=radio]{margin-left: 40px}
 button.u-sub{height: 30px}
-caption{border-bottom: 1px solid #ccc; padding: 10px 0}
-tr{border-bottom: 1px solid #ccc; text-align: center; color: #999}
+caption{border-bottom: 1px solid #eee;padding: 10px 0;color: #999;}
+tr{border-bottom: 1px solid #eee;text-align: center;color: #999;}
 tr:hover{background: rgba(0,0,0,.1)}
 /* 统一清除浮动 */
-.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.'}
+.g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
 .g-bdc,.m-dimg ul,.u-tab{zoom:1;}
 /* 布局 */
 .g-doc{background: url(../images/js-bg.jpg) center no-repeat; background-size: cover; background-attachment: fixed;}
 .g-bd a,td>span{color: #39A870}
 .g-bd a:hover{color: orange; text-decoration: underline}
-.g-bd{width: 1011px; margin: 0 auto; overflow: hidden; margin-bottom: 50px; margin-top: 100px;padding: 10px}
+.g-bd{width: 1011px;margin: 0 auto;overflow: hidden;margin-bottom: 50px;/* margin-top: 100px; */padding: 10px;}
 .g-bd p{overflow: hidden;}
-.g-sd{float: left; width: 300px; background: rgba(0, 0, 0, 0.08); border-top-left-radius: 50px; font-weight: bold; font-size: 16px}
+.g-sd{float: left;width: 300px;background: rgba(0, 0, 0, 0.08);font-weight: bold;font-size: 16px;}
 .g-sd h1{font-size: 20px; text-indent: 2em}
 .g-sd li,
-.g-sd .exit{height: 45px; line-height: 45px; text-indent: 1em; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; cursor: pointer}
+.g-sd .exit{height: 45px;line-height: 45px;text-indent: 1em;-webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;cursor: pointer;border-bottom: 1px solid #fff;}
 .g-sd li span,
 .g-sd .exit span{float: right; text-indent: -2em; font-family: serif}
-.g-sd li.z-crt{background: #39A870; color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd li.z-crt{background: #39A870;color: #FFF;}
 .g-sd li:hover,
-.g-sd .exit:hover{background: rgba(57, 168, 112, 0.48); color: #FFF; box-shadow: #ccc -5px 5px 0}
+.g-sd .exit:hover{background: rgba(57, 168, 112, 0.48); color: #FFF}
 .g-sd .hd{padding-bottom: 50px; border-bottom: 2px dashed #ccc}
-.g-mn{float: right; width: 600px; padding: 50px 0}
+.g-mn{float: right;width: 600px;}
+.g-mn .incard>h1{font-size: 20px; text-align: left}
 /* 模块 */
-.m-hdpic{position: static; width: 100px; height: 100px; float: left;}
-.m-photos{padding: 20px 0; margin-left: -20px}
-.m-photos>li{float: left; width: 120px; height: 120px; line-height: 120px; border: 2px solid #ccc; text-align: center; font-size: 100px; color: #ccc; cursor: pointer; margin-left: 20px}
+.m-hdpic{width: 100px;height: 100px;float: right;position: relative;}
+.m-photos{position: relative; width: 610px; height: 500px; overflow: auto; margin-left: -10px; border-bottom: 3px solid rgba(255, 0, 0, 0.24)}
+.m-photos>li{position: absolute;width: 140px;text-align: center; color: #ccc;cursor: pointer;line-height: 1; overflow: hidden;}
+.m-photos .mask{position: absolute; top: 100%; left: 0; width: 138px; height: 100%!important; overflow: hidden; height: 0; background: rgba(0, 0, 0, 0.5); border-radius: 5px}
+.m-photos .mask>span{position: absolute; top: 50%; left: 0;  width: 138px; text-align: center; height: 50px; margin-top: -25px; line-height: 50px}
+.edit .m-photos>li:hover .mask{top: 0}
+.noedit .m-photos img:hover{-webkit-transform: scale(1.5);-moz-transform: scale(1.5);-ms-transform: scale(1.5);-o-transform: scale(1.5);transform: scale(1.5)}
+.m-photos img{display: block; width: 120px; padding: 8px; border: 1px solid #ccc; border-radius: 5px}
+.m-photos input{opacity: 0; position: absolute; width: 140px; height: 140px; top: 0; left: 0; cursor: pointer}
 .m-orderAdmin{padding: 20px 0; width: 100%; color: #999}
 .m-orderAdmin b,
 .m-income span.ispayed{color: #F00}
 .m-orderAdmin b.ispayed{color: orange}
 .m-balance tr{border: none; font-weight: bold;}
+/* 后期修改 */
+.m-cginfo td,
+.m-jiesuan td{text-align: left; padding: 10px 0}
+.m-cginfo tr{border: none}
+.m-cginfo td>input,
+.m-jiesuan td>input{width: 300px!important; padding: 0; border: 1px solid #999!important; border-radius: 5px; background:  rgba(255, 255, 255, .5)!important}
+.m-cginfo td>input[type=radio],
+.m-jiesuan td>input[type=radio]{width: auto!important;}
+.m-cginfo td>textarea{width: 300px; height: 80px; padding: 0; border: 1px solid #999; border-radius: 5px; background:  rgba(255, 255, 255, .5)}
+.m-cginfo td>select{width: 80px; height: 30px; background: rgba(255, 255, 255, .5); border-radius: 5px;}
+.m-cginfo td:nth-child(2n-1),
+.m-jiesuan td:nth-child(2n-1){text-align: right}
+.m-cginfo button[type=submit]{width: 228px; height: 50px; border-radius: 5px}
+.m-serv input[type=checkbox],
+.m-apply input[type=checkbox]{opacity: 0; position: absolute; left: 0;width: 190px; height: 55px}
+.m-serv li,
+.m-apply li{display: inline-block;position: relative;width: 190px;height: 55px;border: 1px solid #ccc;margin-bottom: 4px;text-align: center;}
+.m-serv li.z-crt,
+.m-apply li.z-crt{border: 1px solid #39A870; background: url(../images/selected.png) right bottom no-repeat;}
+.m-serv li>h2,
+.m-apply li>h2{font-size: 16px; line-height: 30px}
+.m-serv li>p>span,
+.m-apply li>p>span{display: inline; color: orange}
+.m-apply .infos{width: 598px;height: 200px;border: 1px solid #ccc;margin-bottom: 20px;text-indent: 2em;}
+.m-apply li+li{margin-left: 8px}
 /* 元件 */
-.u-sub{width: 50%; height: 55px; margin-top: 20px; background: #F00; border: none; color: #FFF; font-size: 20px; -webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+.u-sub{width: 200px;height: 50px;border-radius: 5px;margin-top: 20px;background: #F00;border: none;color: #FFF;font-size: 20px;-webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
 .u-sub:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
-/* 功能 */
+/* 函数 */
 .f-tac{text-align:center}
 /* 皮肤 */
 .s-fc,a.s-fc:hover{color:#fff;}

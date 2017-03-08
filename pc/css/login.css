@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* 统一调用背景图 */
 /*.m-logo a,.m-nav a,.m-nav em{background:url(images/sprite.png) no-repeat 9999px 9999px;}*/
 textarea,
@@ -5,7 +6,7 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=number],
-input[type=password]{width: 100%;height: 30px;border: none;border:1px solid #999;text-indent: 1em;}
+input[type=password]{width: 368px!important;height: 45px;text-indent: 1.5em;padding: 0;border: 1px solid #999!important;border-radius: 5px;background:  rgba(255, 255, 255, .5)!important;}
 textarea{ line-height: 1.5em; padding: .5em }
 h1{font-size: 36px; color: #39A870; line-height: 100px;}
 p label{display: block; padding: 5px 0}
@@ -17,19 +18,21 @@ b input[type=checkbox]{margin-left: 40px}
 .g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
 .g-bdc,.m-dimg ul,.u-tab{zoom:1;}
 /* 布局 */
-.g-bd{width: 1011px; margin: 0 auto; overflow: hidden; margin-bottom: 50px; margin-top: 100px;padding: 10px}
-.g-bd p{padding: 20px 0}
+.g-bd{width: 1011px;margin: 0 auto;overflow: hidden;margin-bottom: 50px;/* margin-top: 100px; */padding: 10px;}
+.g-bd p{padding: 10px 0;}
 .g-mn{float: left; position: relative;}
-.g-sd{float:right;width:300px}
+.g-mn a{color: #F00}
+.g-sd{float:right;width:300px; margin-top: 80px}
 /* 模块 */
 .m-tab{width: 540px; height: 55px; line-height: 55px}
-.m-tab li{float: left; width: 180px; height: 55px; background: #39A870; text-align: center; font-size: 20px; color: #FFF; cursor: pointer;}
+.m-tab li{float: left; width: 180px; height: 55px; margin-right: 10px; border-radius: 5px;background: #39A870; text-align: center; font-size: 20px; color: #FFF; cursor: pointer;}
 .m-tab li:hover,
-.m-tab li.z-crt{background: #F89E3D; box-shadow: #EC891F -5px -5px 0px; transition: all .5s; transform: translateY(5px);}
+.m-tab li.z-crt{background: #F89E3D; transition: all .5s}
 .outer{position: absolute; right: -480px; top: -56px; width: 309px; height: 500px; background: #FFF;}
-.m-hdpic{width: 150px; height: 150px;  border-radius: 50%; background: url(../images/js1.jpg) center no-repeat; background-size: cover; border: 3px solid #39A870}
-.m-hdpic input{width: 100%; height: 100%; border-radius: 50%; opacity: 0; filter:alpha(opacity=0); cursor: pointer;}
+.m-hdpic{width: 150px;height: 150px;background: url(../images/js1.jpg) center no-repeat;background-size: cover;}
+.m-hdpic input{width: 100%;height: 100%;border-radius: 50%;opacity: 0;filter:alpha(opacity=0);cursor: pointer;top: 35px;}
 .incard{display: none; position: relative}
+.m-login.login{width: 400px}
 .m-jsup,
 .m-khup,
 .m-in{display: none; position: relative; opacity: 0}
@@ -39,9 +42,20 @@ b input[type=checkbox]{margin-left: 40px}
 .m-in .m-tab{position: absolute; left: 100%; width: 180px; margin-left: -180px; z-index: 1}
 .m-in .m-tab>li{float: none}
 .m-in span{display: inline-block; width: 45%}
+
+/*后期修改*/
+.m-hdpic{float: right;position: relative;}
+td{text-align: left; padding: 10px 0}
+tr{border: none}
+td>input{width: 300px!important; padding: 0; border: 1px solid #999!important; border-radius: 5px; background:  rgba(255, 255, 255, .5)!important}
+td>input[type=radio],
+td>input[type=checkbox]{width: auto!important;}
+td>textarea{width: 300px; height: 80px; padding: 0; border: 1px solid #999; border-radius: 5px; background:  rgba(255, 255, 255, .5)}
+td>select{width: 80px; height: 30px; background: rgba(255, 255, 255, .5); border-radius: 5px;}
+td:nth-child(2n-1){text-align: right}
 /* 元件 */
-.u-btn{height:20px;border:1px solid #333;}
-.u-sub{width: 50%; height: 55px; margin-top: 20px; background: #F00; border: none; color: #FFF; font-size: 20px; -webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+.u-btn{height:20px;border:1px solid #333; border-radius: 5px;}
+.u-sub{width: 50%; height: 55px; border-radius: 5px; margin-top: 20px; background: #F00; border: none; color: #FFF; font-size: 20px; -webkit-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
 .u-sub:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px;}
 /* 功能 */
 .f-tac{text-align:center}

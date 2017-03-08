@@ -72,6 +72,43 @@ function myFade(el, show, speed, fn) {
   step();
 }
 
+//删除节点
+
+// 瀑布流
+function warterfall(parent, itemNodeName) {
+  var oLis = parent.querySelectorAll(itemNodeName),
+      pWidth = parseInt(getStyle(parent).width),
+      imgW = parseInt(getStyle(oLis[0]).width) + 10,
+      colsN = Math.floor(pWidth / imgW),
+      arrTop = [], arrLeft = [], minTop = 0, currIndex = 0;
+  myEach(oLis, function(v, k) {
+    if(k < colsN) {
+      arrTop.push(v.offsetTop + parseInt(getStyle(v).height)+10);
+      arrLeft.push(k * imgW);
+      myCss(v, {
+        left: k * imgW + "px"
+      });
+    } else {
+      minTop = Math.min.apply(null, arrTop);
+      currIndex = arrTop.indexOf(minTop);
+      myCss(v, {
+        left: arrLeft[currIndex] + "px",
+        top: minTop + "px"
+      });
+      arrTop[currIndex] = minTop + parseInt(getStyle(v).height)+10;
+    }
+  });
+}
+
+function getStyle(obj) {
+  var style = null;
+  if(window.getComputedStyle) {
+    return style = window.getComputedStyle(obj);
+  } else {
+    return style = obj.currentStyle;
+  }
+}
+
 function myQuery(str) {
   var all = document.getEmlmentsByTagName("*"),
   rasult = [], tmpStr = "", tmpArr = [];

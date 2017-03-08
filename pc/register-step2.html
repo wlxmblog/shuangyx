@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>爽一下</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/login.css"/>
+  <link rel="stylesheet" href="css/func.css">
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link rel="apple-touch-icon" href="images/touchicon.png"/>
+  <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+  <div class="g-doc">
+    <!-- 头部 -->
+    <div class="g-hd f-cb">
+      <div class="g-top">
+        <div class="m-navbar">
+          <!-- logo -->
+          <div class="m-tlogo f-fl">
+            <img src="images/logo.png" alt="">
+            <span>上门按摩第一品牌</span>
+          </div>
+          <!-- 导航 -->
+          <ul class="m-nav f-fr">
+            <li><a href="index.html" class="z-crt">首页</a></li>
+            <li><a href="index.html#m-service">项目服务</a></li>
+            <li><a href="index.html#m-order">技师直约</a></li>
+            <li><a href="login.html">成为技师</a></li>
+            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 70px"></div>
+    </div>
+    <div class="g-bd">
+      <div class="g-mn m-login">
+          <div class="m-jsin incard f-db">
+            <h1 class="hd">技师注册爽一下<small style="font-size: 14px; color: #999; margin-left: 5px">点击<a href="login.html" style="display: inline; text-decoration: underline">登录</a></small></h1>
+            <form action="/" enctype="multipart/form-data" style="width: 1011px">
+            <div class="m-hdpic">
+              <input type="file" name="hd" id="hd">
+              <span class="upfile" style="display: block;cursor: pointer;line-height: 30px;text-align: center;width: 100%;color: #fff;height: 30px;border: none;background: #39A870;margin-top: 156px;">点击上传</span>
+            </div>
+            <input type="hidden" name="hdpic" id="hdpic">
+            <script type="text/javascript">
+              (function() {
+                var file = document.getElementById("hd"),
+                    fileup = document.getElementById("hdpic");
+                file.onchange = function() {
+                  fileup.value = "";
+                };
+              })();
+            </script>
+            <table>
+              <tr>
+                <td width="100">性别：</td>
+                <td>
+                  <input type="radio" name="sex" checked>男 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="sex">女
+                  <span style="color: #f00; display: inline; margin-left: 10px">注册后不可修改</span>
+                </td>
+              </tr>
+              <tr>
+                <td width="100">年龄：</td>
+                <td><input type="date"></td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">身高：</label></td>
+                <td>
+                  <select name="high" id="high">
+                    <option>身高</option>
+                    <option>1cm</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">体重：</label></td>
+                <td>
+                  <select name="high" id="high">
+                    <option>体重</option>
+                    <option>1cm</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">所在地省市：</label></td>
+                <td>
+                  <select class="prov" id="prov4" data-code ="220000"></select> 
+    	            <select class="city" id="city4" data-code ="220100"></select>
+                  <select class="dist" id="area4" data-code ="220104"></select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">户籍：</label></td>
+                <td>
+                  <select class="prov" id="prov5"></select> 
+    	            <select class="city" id="city5"></select>
+                  <select class="dist" id="area5"></select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label>职业：</label></td>
+                <td>
+                  <select name="job" id="job">
+                    <option value="专业技师">专业技师</option>
+                    <option value="兼职技师">兼职技师</option>
+                    <option value="其它">其它</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">服务项目：</label></td>
+                <td>
+                  <input type="checkbox">中式按摩&nbsp;&nbsp;
+                  <input type="checkbox">泰式按摩&nbsp;&nbsp;
+                  <input type="checkbox">全息足疗&nbsp;&nbsp;
+                  <input type="checkbox">小儿全身理疗
+                </td>
+              </tr>
+              <tr>
+                <td><label>结算账户：</label></td>
+                <td>
+                  <select name="bank" id="bank">
+                    <option value="银行卡">银行卡</option>
+                    <option value="支付宝">支付宝</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label>账户名称：</label></td>
+                <td><input type="text" name="" id="" style="width: 100px!important"/></td>
+              </tr>
+              <tr>
+                <td><label>卡号/账号：</label></td>
+                <td><input type="number" name="" id=""/></td>
+              </tr>
+              <tr>
+                <td><label for="tel">联系电话：</label></td>
+                <td><input type="tel" name="tel" id="tel " /></td>
+              </tr>
+              <tr>
+                <td><label for="wx">微信：</label></td>
+                <td><input type="text" name="wx" id="wx" /></td>
+              </tr>
+              <tr>
+                <td><label for="qq">QQ号：</label></td>
+                <td><input type="number" name="qq" id="qq" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">邮箱：</label></td>
+                <td><input type="email" name="email" id="email" /></td>
+              </tr>
+              <tr>
+                <td><label for="ss">自我介绍：</label></td>
+                <td><textarea name="ss" id="ss" cols="30" rows="30"></textarea></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><button type="submit" class="u-sub">确认提交</button></td>
+              </tr>
+            </table>
+          </form>
+          </div>
+      </div>
+    </div>
+    <div class="g-ft">
+      <div class="bd">
+        <div class="f-fl">
+          <div class="m-flogo">爽一下</div>
+          <ul>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>&nbsp;|&nbsp;
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+            </li>
+          </ul>
+          <p>Copyright©1999-2017, ctrip.com. All rights reserved.</p>
+          <p>ICP证：沪B2-20050130沪公网备31010502000018号</p>
+        </div>
+        <div class="f-fr">
+          <img src="images/wx.jpg" alt="">
+          <p>微信扫一扫</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/city2.js"></script>
+  <script type="text/javascript" src="js/citySelect2.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

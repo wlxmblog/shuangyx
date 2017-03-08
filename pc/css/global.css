@@ -21,7 +21,15 @@ body{background:#fff;}
 a,a:hover{color:#333;}
 p{color: #999;}
 
-/*动画*/
+/*自定义滚动条*/
+::-webkit-scrollbar{width: 3px}
+::-webkit-scrollbar-button{}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-track-piece{background: rgba(255, 0, 0, 0.24)}
+::-webkit-scrollbar-thumb{background: rgba(57, 168, 112, 0.63)}
+::-webkit-scrollbar-corner{}
+::-webkit-resizer{}
+/*åŠ¨ç”»*/
 .a-to-tp{animation: totp ease-in .5s; animation-fill-mode: forwards;}
 @keyframes totp {
   from{transform: translateY(100px); opacity: 0}
@@ -59,17 +67,17 @@ p{color: #999;}
   from{box-shadow: #FFF 0 0 5px}
   to{box-shadow: #39A870 0 0 25px}
 }
-/*布局*/
+/*å¸ƒå±€*/
 .g-hd{overflow: hidden}
 .g-top{position: absolute; width: 100%; box-shadow: #ccc 3px 0 20px}
-/*底部*/
+/*åº•éƒ¨*/
 .g-ft{border-top: 5px solid #39a870; background: #333}
 .g-ft .bd{width: 1011px; margin: 0 auto; padding: 57px 0; overflow: hidden; line-height: 24px}
 .g-ft .bd ul{}
 .g-ft .bd li{float: left; color: #FFF}
 .g-ft .bd a{color: #FFF}
 .g-ft .bd .f-fr{text-align: center}
-/*模块*/
+/*æ¨¡å—*/
 /*banner*/
 .m-banner{height: 470px; margin-top: 70px}
 /*msg*/
@@ -79,7 +87,7 @@ p{color: #999;}
 .m-tlogo{height:70px; line-height: 70px;}
 .m-tlogo img{vertical-align: middle; border-right: 1px solid #ccc; margin-right: 19px; padding-right: 15px}
 .m-tlogo span{font-size: 18px}
-/*导航栏*/
+/*å¯¼èˆªæ */
 .m-nav{height: 70px; line-height: 70px}
 .m-nav li{float: left}
 .m-nav .z-crt{font-size: 18px; font-weight: bold; color: #39a870}
@@ -87,11 +95,12 @@ p{color: #999;}
 .m-nav li:hover a{font-size: 18px; font-weight: bold; color: #39a870}
 .m-msg a{display: none;}
 .m-flogo{font-size: 30px; font-weight: bold; color: #999; padding-bottom: 15px}
-/*登录注册页*/
-.m-hdpic{width: 150px; height: 150px;  border-radius: 50%; background: url(../images/js1.jpg) center no-repeat; background-size: cover; border: 3px solid #39A870}
-.m-hdpic input{width: 100%; height: 100%; border-radius: 50%; opacity: 0; filter:alpha(opacity=0); cursor: pointer;}
+/*ç™»å½•æ³¨å†Œé¡µ*/
+.m-hdpic{width: 150px;height: 150px;border-radius: 5px;background: url(../images/js1.jpg) center no-repeat;background-size: cover;}
+.m-hdpic input{width: 100%;opacity: 0;filter: alpha(opacity=0);cursor: pointer;position: absolute;top: 114%;}
 .incard{display: none; position: relative}
-/*元件*/
-.u-login{display: inline-block; height:32px; width:32px; vertical-align: middle; background: url(../images/sprite.png); background-position: 0 -34px}
+/*å…ƒä»¶*/
+.u-login{display: inline-block; height:32px; width:32px; border-radius: 5px; vertical-align: middle; background: url(../images/sprite.png); background-position: 0 -34px}
 .u-btn{width: 200px; height: 50px; border-radius: 5px; color: #FFF; border: none; background: orange; line-height: 50px; text-align: center;}
 .u-btn:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
+.tss{-webkit-transition: all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s; transition: all .5s;}
