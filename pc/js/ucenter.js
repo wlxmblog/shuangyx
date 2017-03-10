@@ -9,6 +9,7 @@ var M_ucenter = function(m) {
       oPhoto = m.querySelector('.m-photos'),
       oEdit = oPhoto.parentNode.querySelector("button"),
       oDel = oPhoto.querySelectorAll("span");
+      upfile = m.querySelector("input[type=file]");
   Tab.change(oLis, incards, "z-crt");
   myEach(oServIps, function(v, k) {
     v.onchange = function() {
@@ -56,7 +57,11 @@ var M_ucenter = function(m) {
       }
     }
   });
-}
+  $(".m-clipPop").hide();
+  upfile.onchange = function() {
+    $(".m-clipPop").show();
+  }
+};
 var m_ucenter = document.querySelector(".g-mn.m-ucenter");
 M_ucenter(m_ucenter);
 
@@ -74,3 +79,28 @@ var selectVa2 = new CitySelect({
     areaId : '#area5',
     isSelect: false
   });
+
+  function saveCallBack(base64) {
+  $(".m-hdpic").css({
+    background: 'url('+ base64 +') center no-repeat',
+    backgroundSize: '100%'
+  });
+  $(".m-clipPop").hide();
+  //最终把此base64传给后端
+  /**
+  $.ajax({
+    data: {
+      base64: base64
+    } 
+  })
+  **/
+}
+
+var c = new ZmCanvasCrop({
+    fileInput: $('#hd')[0],
+    saveBtn: $('#save')[0],
+    box_width: 400,  //剪裁容器的最大宽度
+    box_height: 300, //剪裁容器的最大高度
+    min_width: 110,  //要剪裁图片的最小宽度
+    min_height: 110  //要剪裁图片的最小高度
+  }, saveCallBack);

@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* reset */
 html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
 header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
@@ -21,6 +22,12 @@ body{background:#fff;}
 a,a:hover{color:#333;}
 p{color: #999;}
 
+textarea,
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password]{width: 55%;height: 30px;border: none;background: #E8E8E8;text-indent: 1em;}
 /*自定义滚动条*/
 ::-webkit-scrollbar{width: 3px}
 ::-webkit-scrollbar-button{}
@@ -96,7 +103,7 @@ p{color: #999;}
 .m-msg a{display: none;}
 .m-flogo{font-size: 30px; font-weight: bold; color: #999; padding-bottom: 15px}
 /*ç™»å½•æ³¨å†Œé¡µ*/
-.m-hdpic{width: 150px;height: 150px;border-radius: 5px;background: url(../images/js1.jpg) center no-repeat;background-size: cover;}
+.m-hdpic{width: 150px;height: 150px;border-radius: 5px;background: url(../images/js1.jpg) center no-repeat;background-size: cover}
 .m-hdpic input{width: 100%;opacity: 0;filter: alpha(opacity=0);cursor: pointer;position: absolute;top: 114%;}
 .incard{display: none; position: relative}
 /*å…ƒä»¶*/
@@ -104,3 +111,7 @@ p{color: #999;}
 .u-btn{width: 200px; height: 50px; border-radius: 5px; color: #FFF; border: none; background: orange; line-height: 50px; text-align: center;}
 .u-btn:hover{background: #F1A0A0; -webkit-box-shadow: #F1A0A0 0 0 10px; box-shadow: #F1A0A0 0 0 10px; text-shadow: #FFF 0 0 5px}
 .tss{-webkit-transition: all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s; transition: all .5s;}
+.m-clipPop{position: fixed; top: 50%; left: 50%; width: 400px; height: 400px; margin: -200px 0 0 -200px; background: rgba(0,0,0,.8); border: 2px solid #eee}
+.m-clipPop .canvas-box{ width: 100%; height: 300px; position: relative;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none }
+.m-clipPop .canvas-box .overlay{ position: absolute; left: 0; top: 0; cursor: move;border:1px solid #69f;}
+.m-clipPop .canvas-box div,.canvas-box canvas{-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none}
