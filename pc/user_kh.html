@@ -11,8 +11,15 @@
   <link rel="stylesheet" href="css/func.css">
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link rel="apple-touch-icon" href="images/touchicon.png"/>
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
   <script type="text/javascript" src="js/func.js"></script>
 </head>
+<style>
+  .shu{
+		height: 10px;
+		border-right: 1px solid #A3A3A3;
+	}
+</style>
 <body>
   <div class="g-doc">
     <!-- 头部 -->
@@ -26,62 +33,49 @@
           </div>
           <!-- 导航 -->
           <ul class="m-nav f-fr">
-            <li><a href="index.html" class="z-crt">首页</a></li>
-            <li><a href="index.html#m-service">项目服务</a></li>
-            <li><a href="index.html#m-order">技师直约</a></li>
-            <li><a href="login.html">成为技师</a></li>
-            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
-          </ul>
+						<li><a href="index.html" class="z-crt">首页</a></li>
+						<li><a href="index.html#m-service">项目服务</a></li>
+						<li><a href="index.html#m-order">技师直约</a></li>
+						<li><a href="login.html">成为技师</a></li>
+						<li><a href="login.html" style="margin-right: 5px;" class="log">登陆</a><span class="shu"></span><a href="login.html" style="margin-left: 5px">注册</a> </li>
+						
+						<li class="a-loop-tb">
+							<a href="login.html" class="u-login"></a>
+						</li>
+					</ul>
         </div>
       </div>
       <div style="margin-top: 70px"></div>
     </div>
     
     <div class="g-bd">
+      <h1>客户个人中心</h1>
       <div class="g-sd">
-        <div class="hd f-cb">
-          <div class="m-hdpic">
-            <input type="file" name="hd" id="hd">
-          </div>
-          <h1>技师个人中心</h1>
-        </div>
         <ul>
-          <li>高级认证<span>&gt;</span></li>
           <li class="z-crt">修改个人资料<span>&gt;</span></li>
+          <!--<li>服务项目<span>&gt;</span></li>-->
+          <!--<li>高级认证<span>&gt;</span></li>-->
           <li>相册管理<span>&gt;</span></li>
           <li>订单管理<span>&gt;</span></li>
-          <li>网币余额<span>&gt;</span></li>
-          <li>充值<span>&gt;</span></li>
+          <!--<li>我的收入<span>&gt;</span></li>-->
+          <li>余额<span>&gt;</span></li>
+          <!--<li>结算账号<span>&gt;</span></li>-->
           <li>修改密码<span>&gt;</span></li>
           <li>系统消息通知<span>&gt;</span></li>
         </ul>
-        <div class="exit">退出<span>&gt;</span></div>
+          <div class="exit">退出<span>&gt;</span></div>
       </div>
       <div class="g-mn m-ucenter">
-        <table class="m-apply incard" width="600">
-          <caption>会员vip介绍升级加v，可以直接看到任何技师的任何联系方式</caption>
-          <tr>
-            <td width="200" height="55"><input type="radio" name="jis" />专业技师</td>
-            <td width="200">按摩时长1小时</td>
-            <td width="200">88/年</td>
-          </tr>
-          <tr>
-            <td height="55"><input type="radio" name="jis" />专业技师</td>
-            <td>按摩时长1小时</td>
-            <td>88/年</td>
-          </tr>
-          <tr>
-            <td height="55"><input type="radio" name="jis" />专业技师</td>
-            <td>按摩时长1小时</td>
-            <td>88/年</td>
-          </tr>
-          <tr>
-            <td colspan="3" height="70"><button class="u-btn">开通vip会员</button></td>
-          </tr>
-        </table>
         <div class="m-cginfo incard f-db">
+          <div class="m-clipPop">
+              <div class="canvas-box"></div>
+              <p style="text-align: center"><input type="button" id="save" class="u-sub" value="保存"></p>
+          </div>
           <form action="/" enctype="multipart/form-data">
-            <p>账号：123@qq.com</p>
+            <div class="m-hdpic">
+              <input type="file" name="hd" id="hd">
+              <span class="upfile" style="display: block;cursor: pointer;line-height: 30px;text-align: center;width: 100%;color: #fff;height: 30px;border: none;background: #39A870;margin-top: 110px;">点击上传</span>
+            </div>
             <input type="hidden" name="hdpic" id="hdpic">
             <script type="text/javascript">
               (function() {
@@ -92,98 +86,232 @@
                 };
               })();
             </script>
-            <p>
-              <span class="f-fl">
-                <label for="name">姓名/昵称：</label>
-                <input type="text" name="name" minlength="2" maxlength="10" id="name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" required/>
-              </span>
-              <span class="f-fr">
-                <label for="age">年龄：</label>
-                <input type="number" name="age" minlength="1" id="age" oninvalid="setCustomValidity('请输入正确的年龄！')" pattern="(^\w{1,3}$)" />
-              </span>
-            </p>
-            <p>
-              <span class="f-fl">
-                <label for="high">身高：(cm)</label>
-                <input type="number" name="high" id="high" />
-              </span>
-              <span class="f-fr">
-                <label for="weight">体重：(kg)</label>
-                <input type="number" name="weight" id="weight" />
-              </span>
-            </p>
-            <p class="f-cb">
-              <span class="f-fl">
-                <label for="sen">所在地省市：(例如：四川省)</label>
-                <input type="text" name="sen" id="sen " />
-              </span>
-              <span class="f-fr">
-                <label for="password">户籍省市：(例如：上海市)</label>
-                <input type="text" name="weight" id="weight" />
-              </span>
-            </p>
-            <p>
-              <label for="">职业:</label>
-              <b>
-                <input type="radio" name="job" checked onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">专业技师
-                <input type="radio" name="job" onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">兼职技师
-                <input type="radio" name="job" onclick="getNextNode(this).style.display='inline-block'">其它
-                <input type="text" name="other" id="other" style="display: none" placeholder="您的职业">
-              </b>
-            </p>
-            <p>
-              <label for="">服务项目:</label>
-              <b>
-                <input type="radio" name="serv" checked>中医按摩
-                <input type="radio" name="serv">泰式按摩
-                <input type="radio" name="serv">全息足疗
-                <input type="radio" name="serv">头颈肩理疗
-              </b>
-            </p>
-            <p>
-              <label for="">结算账户:</label>
-              <b>
-                <input type="radio" name="bank" checked>银行账户
-                <input type="radio" name="bank">支付宝账户
-                <input type="text" name="zh" id="zh" placeholder="您的账户">
-              </b>
-            </p>
-            <p>
-              <label for="gy">自我感言：</label>
-              <textarea name="gy" id="gy" cols="30" rows="10"></textarea>
-            </p>
-            <p class="f-cb">
-              <span class="f-fl">
-                <label for="tel">联系电话：</label>
-                <input type="tel" name="tel" id="tel " />
-              </span>
-              <span class="f-fr">
-                <label for="wx">微信：</label>
-                <input type="text" name="wx" id="wx" />
-              </span>
-            </p>
-            <p class="f-cb">
-              <span class="f-fl">
-                <label for="qq">QQ号：</label>
-                <input type="number" name="qq" id="qq" />
-              </span>
-              <span class="f-fr">
-                <label for="email">邮箱：</label>
-                <input type="email" name="email" id="email" />
-              </span>
-            </p>
-            <p>
-              <label for="ss">自我说说：</label>
-              <textarea name="ss" id="ss" cols="30" rows="10"></textarea>
-            </p>
-            <button type="submit" class="u-sub">确认修改</button>
+            <table>
+              <tr>
+                <td width="100">账号：</td>
+                <td>123@qq.com</td>
+              </tr>
+              <tr>
+                <td width="100">性别：</td>
+                <td>男</td>
+              </tr>
+              <tr>
+                <td width="100">年龄：</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">身高：</label></td>
+                <td>
+                  <select name="high" id="high">
+                    <option>身高</option>
+                    <option>1cm</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">体重：</label></td>
+                <td>
+                  <select name="high" id="high">
+                    <option>身高</option>
+                    <option>1cm</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">所在地省市：</label></td>
+                <td>
+                  <select class="prov" id="prov4" data-code ="220000"></select> 
+    	            <select class="city" id="city4" data-code ="220100"></select>
+                  <select class="dist" id="area4" data-code ="220104"></select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">户籍：</label></td>
+                <td>
+                  <select class="prov" id="prov5"></select> 
+    	            <select class="city" id="city5"></select>
+                  <select class="dist" id="area5"></select>
+                </td>
+              </tr>
+              <tr>
+                <td width="100"><label for="high">职业：</label></td>
+                <td>
+                  <input type="radio" name="job" checked onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">专业技师
+                  <input type="radio" name="job" onclick="this.parentNode.children[this.parentNode.children.length-1].style.display='none'">兼职技师
+                  <input type="radio" name="job" onclick="getNextNode(this).style.display='inline-block'">其它
+                </td>
+              </tr>
+              <tr>
+                <td><label for="tel">联系电话：</label></td>
+                <td><input type="tel" name="tel" id="tel " /></td>
+              </tr>
+              <tr>
+                <td><label for="wx">微信：</label></td>
+                <td><input type="text" name="wx" id="wx" /></td>
+              </tr>
+              <tr>
+                <td><label for="qq">QQ号：</label></td>
+                <td><input type="number" name="qq" id="qq" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">邮箱：</label></td>
+                <td><input type="email" name="email" id="email" /></td>
+              </tr>
+              <tr>
+                <td><label for="ss">自我说说：</label></td>
+                <td><textarea name="ss" id="ss" cols="30" rows="30"></textarea></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><button type="submit" class="u-sub">确认修改</button></td>
+              </tr>
+            </table>
+            
           </form>
         </div>
-        <ul class="m-photos incard">
-          <li>+</li>
-          <li>+</li>
-          <li>+</li>
-        </ul>
+        <!--<div class="m-serv incard">
+          <form action="/">
+            <ul>
+              <li>
+                <input type="checkbox" name="serv1">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv2">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv3">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv4">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv1">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv2">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv3">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+              <li>
+                <input type="checkbox" name="serv4">
+                <h2>中医按摩</h2>
+                <p><span>150元</span>/50分钟</p>
+              </li>
+            </ul>
+            <p style="text-align: center"><input type="submit" class="u-sub"></p>
+          </form>
+        </div>-->
+        <!--<div class="m-apply incard">
+          <div class="infos">infos...</div>
+          <ul>
+            <li>
+              <input type="checkbox" name="serv1">
+              <h2>有效期1个月</h2>
+              <p><span>10元</span></p>
+            </li>
+            <li>
+              <input type="checkbox" name="serv2">
+              <h2>有效期1个季度</h2>
+              <p><span>20元</span></p>
+            </li>
+            <li>
+              <input type="checkbox" name="serv3">
+              <h2>有效期1年</h2>
+              <p><span>30元</span></p>
+            </li>
+          </ul>
+          <p style="text-align: center; margin-top: 50px"><button class="u-btn">付费认证</button></p>
+        </div>-->
+        <div class="incard noedit">
+          <ul class="m-photos">
+            <li style="height: 140px; font-size: 40px; font-weight: bold; line-height: 140px; border: 1px solid #ccc; border-radius: 5px; text-align: center;box-sizing: border-box">
+              +
+              <form action="/">
+                <input type="file" name="photo">
+              </form>
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/1.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/2.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/3.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/4.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/5.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/6.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/7.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/8.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/1.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/2.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/3.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/4.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/5.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/6.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/7.jpg" alt="">
+            </li>
+            <li class="tss">
+              <div class="mask tss"><span>删除</span></div>
+              <img class="tss" src="img/8.jpg" alt="">
+            </li>
+          </ul>
+        <button class="u-btn" style="margin-top: 25px; margin-left: -10px">编辑</button>
+      </div>
         <table class="m-orderAdmin incard">
           <caption>订单管理</caption>
           <thead>
@@ -199,76 +327,147 @@
               <td height="55">2017-02-1</td>
               <td><span>最新用户订单名称</span></td>
               <td><b class="ispayed">已付款</b></td>
-              <td><a href="khcenter.html">详情</a></td>
+              <td><a href="jscenter.html">详情</a></td>
             </tr>
             <tr>
               <td height="55">2017-02-1</td>
               <td><span>最新用户订单名称</span></td>
               <td><b>未付款</b></td>
-              <td><a href="khcenter.html">详情</a></td>
+              <td><a href="jscenter.html">详情</a></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <td height="55"><a>首页</a></td>
-              <td><a>上一页</a></td>
-              <td><a>下一页</a></td>
-              <td><a>尾页</a></td>
+              <td colspan="5" height="55">
+                <a>首页</a>&nbsp;&nbsp;
+                <a>上一页</a>&nbsp;&nbsp;
+                <a>1</a>&nbsp;&nbsp;
+                <a>2</a>&nbsp;&nbsp;
+                <a>3</a>&nbsp;&nbsp;
+                <a>下一页</a>&nbsp;&nbsp;
+                <a>尾页</a>&nbsp;&nbsp;
+              </td>
             </tr>
           </tfoot>
         </table>
-        <table class="m-balance incard">
-          <caption>爽币余额</caption>
+        <!--<table class="m-income incard">
+          <caption>我的收入</caption>
+          <thead>
             <tr>
-              <td width="600" height="55" align="left">2017元</td>
+              <td width="120" height="55">服务时间</td>
+              <td width="120">订单编号</td>
+              <td width="120">服务项目</td>
+              <td width="120">服务金额</td>
+              <td width="120">订单状态</td>
             </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td height="55">2017.02.01</td>
+              <td>123456</td>
+              <td>全息足疗</td>
+              <td>150</td>
+              <td>未结算</td>
+            </tr>
+            <tr>
+              <td height="55">2017.02.01</td>
+              <td>123456</td>
+              <td>全息足疗</td>
+              <td>150</td>
+              <td>已结算</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5" height="55">
+                <a>首页</a>&nbsp;&nbsp;
+                <a>上一页</a>&nbsp;&nbsp;
+                <a>1</a>&nbsp;&nbsp;
+                <a>2</a>&nbsp;&nbsp;
+                <a>3</a>&nbsp;&nbsp;
+                <a>下一页</a>&nbsp;&nbsp;
+                <a>尾页</a>&nbsp;&nbsp;
+              </td>
+            </tr>
+          </tfoot>
+        </table>-->
+        <table class="m-balance incard">
+          <caption>我的余额<span style="color: #000;margin-left: 10px">2017￥</span>
+          <a href="#" style="display: inline-block; width: 80px; border-radius: 5px; background: orange; float: right; color: #fff; text-align: center; line-height: 35px">充值</a>
+          <a href="#" style="display: inline-block; width: 80px; border-radius: 5px; margin-right: 10px; background: #39A870; float: right; color: #fff; text-align: center; line-height: 35px">提现</a>
+          </caption>
+          <thead>
+            <tr>
+              <td width="200" height="55">日期</td>
+              <td width="200">交易内容</td>
+              <td width="200">交易金额</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td height="55">2017.02.01</td>
+              <td>服务金额</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td height="55">2017.02.01</td>
+              <td>付款</td>
+              <td>-150</td>
+            </tr>
+            <tr>
+              <td height="55">2017.02.01</td>
+              <td>提现</td>
+              <td>-150</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" height="55">
+                <a>首页</a>&nbsp;&nbsp;
+                <a>上一页</a>&nbsp;&nbsp;
+                <a>1</a>&nbsp;&nbsp;
+                <a>2</a>&nbsp;&nbsp;
+                <a>3</a>&nbsp;&nbsp;
+                <a>下一页</a>&nbsp;&nbsp;
+                <a>尾页</a>&nbsp;&nbsp;
+              </td>
+            </tr>
+          </tfoot>
         </table>
-        <form action="/">
-          <table class="m-balance incard">
-            <caption>余额：2017元</caption>
-              <tr>
-                <td width="150" height="55" align="left"><input type="radio" name="pay" value="66" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'" checked>66爽币</td>
-                <td width="150" height="55" align="left"><input type="radio" name="pay" value="166" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">166爽币</td>
-                <td width="150" height="55" align="left"><input type="radio" name="pay" value="236" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">236爽币</td>
-                <td width="150" height="55" align="left"><input type="radio" name="pay" value="366" onchange="document.getElementById('ispay').innerText='需支付：'+this.value+'元'">366爽币</td>
-              </tr>
-              <tr>
-                <td colspan="4" align="left" style="color: #f00" id="ispay">需支付：66元</td>
-              </tr>
-              <tr>
-                <td colspan="4" height="85"><button type="submit" class="u-sub" style="background: #39A870; margin: 0">立即充值</button></td>
-              </tr>
-              <tr>
-                <td colspan="4">
-                  <table>
-                    <caption>历史充值记录</caption>
-                    <thead>
-                      <tr>
-                        <td width="150" height="55">时间</td>
-                        <td width="200">充值金额</td>
-                        <td width="250" colspan="2">实际支付</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td height="55">2017.01.01</td>
-                        <td>200爽币</td>
-                        <td colspan="2">-200.00</td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td height="55"><a>首页</a></td>
-                        <td><a>上一页</a></td>
-                        <td><a>下一页</a></td>
-                        <td width="150"><a>尾页</a></td>
-                      </tr>
-                    </tfoot>
-                  </table>
+        <style>
+          .m-jiesuan tr{border: none}
+          .m-jiesuan td{text-align: left!important}
+        </style>
+        <!--<form action="/">
+          <table class="m-jiesuan incard">
+            <caption>结算账号</caption>
+               <tr>
+                <td width="100"><label for="high">结算账户：</label></td>
+                <td>
+                  <select name="" id="">
+                    <option value="银行账户">银行账户</option>
+                    <option value="支付宝账户">支付宝账户</option>
+                  </select>
                 </td>
               </tr>
+              <tr>
+                <td>账户名称：</td>
+                <td>
+                  <input type="text" name="zh" id="zh" style="width: 80px!important">
+                </td>
+              </tr>
+              <tr>
+                <td>账号：</td>
+                <td>
+                  <input type="text" name="zh" id="zh">
+                </td>
+              </tr>
+              <tr>
+                <td><button class="u-sub" style="width: 100px">修改</button></td>
+                <td></td>
+              </tr>
           </table>
-        </form>
+        </form>-->
         <div class="m-repass incard">
           <form action="/" enctype="multipart/form-data">
             <p>
@@ -336,6 +535,9 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/city2.js"></script>
+  <script type="text/javascript" src="js/citySelect2.js"></script>
   <script type="text/javascript" src="js/ucenter.js"></script>
 </body>
 </html>

@@ -1,26 +1,33 @@
 var M_ucenter = function(m) {
   var incards = m.querySelectorAll(".incard"),
       oTab = document.querySelector(".g-sd>ul"),
-      oLis = oTab.querySelectorAll("li"),
-      oServ = m.querySelector('.m-serv'),
-      oServIps = oServ.querySelectorAll('input[type=checkbox]'),
-      oServ = m.querySelector('.m-apply'),
-      oAppIps = oServ.querySelectorAll('input[type=checkbox]'),
-      oPhoto = m.querySelector('.m-photos'),
+      oLis = oTab.querySelectorAll("li");
+  var oServ = m.querySelector('.m-serv')? m.querySelector('.m-serv'): null,
+      oServIps,
+      oServ,
+      oAppIps;
+  if( oServ != null ) {
+      oServIps = oServ.querySelectorAll('input[type=checkbox]');
+      oServ = m.querySelector('.m-apply');
+      oAppIps = oServ.querySelectorAll('input[type=checkbox]');
+  }
+  var oPhoto = m.querySelector('.m-photos'),
       oEdit = oPhoto.parentNode.querySelector("button"),
       oDel = oPhoto.querySelectorAll("span");
       upfile = m.querySelector("input[type=file]");
   Tab.change(oLis, incards, "z-crt");
-  myEach(oServIps, function(v, k) {
-    v.onchange = function() {
-      v.parentNode.className = v.checked? 'z-crt': '';
-    }
-  });
-  myEach(oAppIps, function(v, k) {
-    v.onchange = function() {
-      v.parentNode.className = v.checked? 'z-crt': '';
-    }
-  });
+  if( oServ ) {
+     myEach(oServIps, function(v, k) {
+      v.onchange = function() {
+        v.parentNode.className = v.checked? 'z-crt': '';
+      }
+    });
+    myEach(oAppIps, function(v, k) {
+      v.onchange = function() {
+        v.parentNode.className = v.checked? 'z-crt': '';
+      }
+    });
+  }
   oTab.onclick = function() {
     setTimeout(function() {
       if(oPhoto.clientWidth)

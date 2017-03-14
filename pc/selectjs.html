@@ -39,10 +39,6 @@
 		border-right: 1px solid #A3A3A3;
 	}
 
-	.m-serv li{
-		width: 205px;
-		height: 60px;
-	}
 
 	.g-mn {
 		float: inherit;
@@ -50,6 +46,37 @@
 		margin: auto !important;
 	}
 
+	.m-serv{
+		overflow: hidden;
+	}
+	.m-serv ul{
+		width: 74%;
+		float: left;
+	}
+	.m-serv li{
+		height: 60px;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+	.photo{
+		width: 200px;
+		float: left;
+		margin-right: 20px;
+	}
+    
+	.photo img{
+		width: 100%;
+	}
+	.photo p{
+		width: 100%;
+		text-align: center;
+		color: black;
+		
+	}
+	.name{
+		color: #8F8D8E;
+		display: initial;
+	}
 	.kuang {
 		width: 415px;
 		border: 1px solid #D8D8D8;
@@ -90,6 +117,30 @@
 		margin-left: 4%;
 		text-align: center;
 	}
+	 
+	.sub,.add,.num{
+		float: left;
+		height: 35px; 
+		text-align: center;
+		line-height: 35px;
+	}
+	.num input{
+		width: 70px;
+		height: 35px;
+		margin-left: 20px;
+		border: 1px solid #999;
+	}
+	.sub,.add{
+		width: 35px;
+	}
+	.sub{
+		background-color: #E5E5E5;
+	}
+	.add{
+		background-color: #43AB76;
+		margin-left: 20px;
+		color: white;
+	}
 	input{-webkit-appearance:none;}
 	.m-serv h2{
 		margin-top: -10px;
@@ -127,6 +178,10 @@
 		<div class="g-bd">
 			<div class="g-mn incard f-db">
 				<div class="m-serv">
+					<div class="photo">
+						<img src="img/2_2.jpg" alt="">
+						<p>昵称: <span class="name">我的名字</span> </p>
+					</div>
 					<form action="/">
 						<ul>
 							<label for="a">
@@ -208,6 +263,14 @@
 					<form action="/">
 						<table class="tian" >
 							<tr>
+								<td>服务份数:</td>
+								<td style="overflow: hidden;">
+									<div class="sub">-</div>
+									<div class="num"><input type="text" value="1">份</div>
+									<div class="add">+</div>
+								</td>
+							</tr>
+							<tr>
 								<td>
 									省市:
 								</td>
@@ -225,7 +288,7 @@
 									服务地址:
 								</td>
 								<td>
-									<input type="text">
+									<input type="text" placeholder="区域地址门牌号">
 								</td>
 							</tr>
 							<tr>
@@ -319,6 +382,24 @@
 			var s2 = document.getElementById("s2").value;
 			dizhi = "" + s1 + s2;
 			return dizhi;
+		}
+
+		var add = document.querySelector(".add");
+		var sub = document.querySelector(".sub");
+		var num = document.querySelector(".num input");
+		add.onclick = function(){
+			var temp = num.value;
+			temp++;
+			num.value = temp;
+		}
+		sub.onclick = function(){
+			var temp = num.value;
+			temp--;
+			num.value = temp;
+			if (num.value <= 0) {
+				temp = 0;
+				num.value = temp;
+			}
 		}
 	</script>
 </body>

@@ -13,6 +13,12 @@
   <link rel="apple-touch-icon" href="images/touchicon.png"/>
   <script type="text/javascript" src="js/func.js"></script>
 </head>
+<style>
+  .shu{
+		height: 10px;
+		border-right: 1px solid #A3A3A3;
+	}
+</style>
 <body>
   <div class="g-doc">
     <!-- 头部 -->
@@ -26,17 +32,21 @@
           </div>
           <!-- 导航 -->
           <ul class="m-nav f-fr">
-            <li><a href="index.html" class="z-crt">首页</a></li>
-            <li><a href="index.html#m-service">项目服务</a></li>
-            <li><a href="index.html#m-order">技师直约</a></li>
-            <li><a href="login.html">成为技师</a></li>
-            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
-          </ul>
+						<li><a href="index.html" class="z-crt">首页</a></li>
+						<li><a href="index.html#m-service">项目服务</a></li>
+						<li><a href="index.html#m-order">技师直约</a></li>
+						<li><a href="login.html">成为技师</a></li>
+						<li><a href="login.html" style="margin-right: 5px;" class="log">登陆</a><span class="shu"></span><a href="login.html" style="margin-left: 5px">注册</a> </li>
+						
+						<li class="a-loop-tb">
+							<a href="login.html" class="u-login"></a>
+						</li>
+					</ul>
         </div>
       </div>
       <div style="margin-top: 70px"></div>
     </div>
-    <div class="g-bd">
+    <div class="g-bd" style="height: 570px;">
       <div class="g-mn m-login login">
         <div class="m-jsup card f-db">
           <h1 class="hd">登录爽一下<small style="font-size: 14px; color: #999; margin-left: 5px">点击<a href="register.html" style="display: inline; text-decoration: underline">注册</a></small></h1>
@@ -58,7 +68,7 @@
         <img src="images/ready.png" alt="">
       </div>
     </div>
-    <div class="g-ft" style="position: absolute;width: 100%; bottom: 0">
+    <div class="g-ft">
       <div class="bd">
         <div class="f-fl">
           <div class="m-flogo">爽一下</div>
@@ -89,5 +99,11 @@
       </div>
     </div>
   </div>
+  <script>
+    var sub = document.querySelector(".u-sub");
+    sub.onclick = function (){
+      window.location.href = "user_js.html";
+    }
+  </script>
 </body>
 </html>

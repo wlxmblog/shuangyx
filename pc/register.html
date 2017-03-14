@@ -12,7 +12,16 @@
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link rel="apple-touch-icon" href="images/touchicon.png"/>
   <script type="text/javascript" src="js/func.js"></script>
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 </head>
+<style>
+  .shu{
+		height: 10px;
+		border-right: 1px solid #A3A3A3;
+	}
+  .m-tab li:hover
+{background: #F89E3D; transition: all .5s}
+</style>
 <body>
   <div class="g-doc">
     <!-- 头部 -->
@@ -26,12 +35,16 @@
           </div>
           <!-- 导航 -->
           <ul class="m-nav f-fr">
-            <li><a href="index.html" class="z-crt">首页</a></li>
-            <li><a href="index.html#m-service">项目服务</a></li>
-            <li><a href="index.html#m-order">技师直约</a></li>
-            <li><a href="login.html">成为技师</a></li>
-            <li class="a-loop-tb"><a href="login.html" class="u-login"></a></li>
-          </ul>
+						<li><a href="index.html" class="z-crt">首页</a></li>
+						<li><a href="index.html#m-service">项目服务</a></li>
+						<li><a href="index.html#m-order">技师直约</a></li>
+						<li><a href="login.html">成为技师</a></li>
+						<li><a href="login.html" style="margin-right: 5px;" class="log">登陆</a><span class="shu"></span><a href="login.html" style="margin-left: 5px">注册</a> </li>
+						
+						<li class="a-loop-tb">
+							<a href="login.html" class="u-login"></a>
+						</li>
+					</ul>
         </div>
       </div>
       <div style="margin-top: 70px"></div>
@@ -40,8 +53,8 @@
       <div class="g-mn m-login">
           <h1 class="hd">注册爽一下<small style="font-size: 14px; color: #999; margin-left: 5px">点击<a href="login.html" style="display: inline; text-decoration: underline">登录</a></small></h1>
           <ul class="m-tab">
-            <li class="z-crt">技师注册</li>
-            <li>客户注册</li>
+            <li class="z-crt j-crt">技师注册</li>
+            <li class="k-crt">客户注册</li>
           </ul>
           <div class="m-jsin incard f-db">
             <form action="/" enctype="multipart/form-data">
@@ -73,7 +86,7 @@
               <p>
                 <input type="checkbox" checked disabled>我已经同意并阅读了<a href="#">使用条款</a>及<a href="#">隐私政策</a>
               </p>
-              <button type="submit" class="u-sub" onclick="window.location.href='register-step2.html'">下一步</button>
+              <button type="submit" class="u-sub" >下一步</button>
             </form>
           </div>
       </div>
@@ -113,5 +126,27 @@
     </div>
   </div>
   <script type="text/javascript" src="js/login.js"></script>
+  <script>
+    var kh = document.querySelector(".k-crt");
+    var js = document.querySelector(".j-crt");
+    var sub = document.querySelector(".u-sub");
+    kh.onclick = function (){
+      js.className = "";
+      kh.className = "z-crt"
+    }
+    js.onclick = function (){
+       js.className = "z-crt";
+       kh.className = ""
+    }
+    sub.onclick = function (){
+      // alert(window.getComputedStyle(kh).background.toString(),/rgb\(57,168,112\)/.test(window.getComputedStyle(kh).background.toString()));
+      if (/rgb\(57,\s168,\s112\)/.test(window.getComputedStyle(kh).background)) {
+        window.location.href = "register-step2.html";
+      }else{
+        window.location.href = "register-step3.html";
+      }
+    }
+    
+  </script>
 </body>
 </html>
